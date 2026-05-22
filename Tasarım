@@ -1,0 +1,59 @@
+## Doctor Sim Oyun Evreni ve Departmanlar
+
+### 1. Oyun Hikayesi
+- Oyuncu, kendi muayenehanesinde bağımsız doktor olarak başlar.
+- Basit hastalıklardan karmaşık vakalara ilerleyen progression sistemi.
+- Her hasta farklı semptom ve test gerektirir.
+- Amaç: doğru teşhis, tedavi, klinik geliştirme, XP ve seviye kazanma.
+
+### 2. Oyun Mekanikleri
+- Hasta akışı, muayene, test isteme, sonuç alma, tedavi yazma.
+- XP kazanımı, level progression.
+- Testler ve tedavi yan etkileri, risk ve zaman yönetimi.
+- Randomizasyon: her hasta farklı semptom kombinasyonu.
+
+### 3. Level Sistemi
+- Level 1–5: Basit hastalıklar, düşük risk.
+- Level 6–10: Orta zorluk, laboratuvar testleri.
+- Level 11–15: Karmaşık hastalıklar, çoklu hasta, acil durum.
+- Level 16+: Uzman doktor, nadir vakalar, premium testler.
+
+### 4. Materyaller ve Kaynaklar
+- **Hastalar:** yaş, cinsiyet, geçmiş.
+- **Hastalıklar:** semptom + test + tedavi + risk + XP.
+- **Testler:** kan, EKG, röntgen, MR, ultrason.
+- **İlaçlar:** dozaj, etki süresi, yan etkiler.
+- **Ekipman & laboratuvar:** basitten ileriye.
+- **Para / kaynak birimleri:** hasta ödemesi, upgrade, dekor.
+
+### 5. Motivasyon ve İlerleme
+- XP / Level barları, yeni içerik açılımı.
+- Aylık pass ve görevler.
+- Randomized hasta ve semptomlar.
+- Başarı ve risk dengesi: doğru tedavi → ödül, yanlış → ceza.
+
+### 6. Oyun Görseli ve Oynanış
+- Tek kontrol paneli ekranı: hasta listesi, detay paneli, test paneli, tedavi paneli, randevu paneli, XP/para barı.
+- Butonlar: Ateş ölç, Tansiyon ölç, Nabız/Hırıltı, Test iste, İlaç yaz.
+- Test ve ilaç menüleri açılır.
+- Hasta geçmişi ve randevu sistemi.
+
+### 7. Departmanlar
+
+#### a. UI / UX Departmanı
+- Kontrol paneli tasarımı, açılır menüler, buton yerleşimi.
+- Geri bildirim ve oyuncu etkileşimi.
+
+#### b. Art / Grafik Departmanı
+- Hasta avatarları, panel ikonları, test ve ilaç görselleri.
+- 2D/2.5D sahneler veya kart görseller.
+
+#### c. Gameplay / Sistem Departmanı
+- Test sonuçları ve ilaç etkileri, XP ve level sistemi.
+- Hasta ilerleyişi ve randevu sistemi.
+- Randomizasyon ve progression logic.
+
+#### d. İçerik / Materyal Departmanı
+- Hastalık, test, ilaç, ekipman ve materyal listesini organize eder.
+- Level bazlı açılacak içerikleri planlar.
+- Aylık pass ve görevleri tasarlar.
