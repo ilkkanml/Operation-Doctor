@@ -1,0 +1,112 @@
+name: Department Orchestrator
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  department-response:
+    if: ${{ !github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate department response
+        uses: actions/github-script@v7
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        with:
+          script: |
+            const fs = require('fs');
+            const crypto = require('crypto');
+
+            const issue = context.payload.issue;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const departments = [
+              ['department:studio-director', 'Studio Director', 'departments/studio-director.md'],
+              ['department:game-systems', 'Game & Systems Designer', 'departments/game-systems.md'],
+              ['department:clinical-content', 'Clinical Content Designer', 'departments/clinical-content.md'],
+              ['department:ui-ux-2_5d', 'UI/UX & 2.5D Experience Designer', 'departments/ui-ux-2_5d.md'],
+              ['department:technical-architect', 'Technical Architect', 'departments/technical-architect.md'],
+              ['department:qa-release', 'QA & Release Director', 'departments/qa-release.md']
+            ];
+
+            const labels = (issue.labels || []).map(label => label.name);
+            const selected = departments.find(([label]) => labels.includes(label));
+
+            if (!selected) {
+              core.notice('No department label found. Skipping department response.');
+              return;
+            }
+
+            const [departmentLabel, departmentName, promptPath] = selected;
+            const requestText = `${issue.title}\n\n${issue.body || ''}`;
+            const hash = crypto.createHash('sha256').update(`${departmentLabel}\n${requestText}`).digest('hex').slice(0, 16);
+            const marker = `<!-- operation-doctor-department-orchestrator:${departmentLabel}:${hash} -->`;
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number: issue.number,
+              per_page: 100
+            });
+
+            if (comments.some(comment => (comment.body || '').includes(marker))) {
+              core.notice('Duplicate request hash found. Skipping response.');
+              return;
+            }
+
+            if (!process.env.OPENAI_API_KEY) {
+              throw new Error('OPENAI_API_KEY secret is missing.');
+            }
+
+            const readIfExists = (path) => fs.existsSync(path) ? fs.readFileSync(path, 'utf8') : '';
+            const departmentPrompt = readIfExists(promptPath);
+            const masterBible = readIfExists('00_OPERATION_DOCTOR_MASTER_BIBLE.md');
+            const departmentRules = readIfExists('02_DEPARTMENT_RULES.md');
+            const roadmap = readIfExists('01_MILESTONE_ROADMAP.md');
+
+            const systemPrompt = `You are the ${departmentName} for Operation: Doctor.\n\n${departmentPrompt}\n\nMASTER BIBLE CONTEXT:\n${masterBible}\n\nDEPARTMENT RULES:\n${departmentRules}\n\nROADMAP CONTEXT:\n${roadmap}\n\nRules:\n- Answer in Turkish.\n- Be direct and practical.\n- Do not rewrite the whole project.\n- Stay inside your department authority.\n- If a decision belongs to another department, say which department should decide.\n- Do not expose secrets or API keys.\n- If implementation is requested but the milestone is not ready, recommend the proper prerequisite.\n`;
+
+            const userPrompt = `GitHub issue request:\n\nTitle: ${issue.title}\n\nBody:\n${issue.body || ''}\n\nLabels: ${labels.join(', ')}`;
+
+            const response = await fetch('https://api.openai.com/v1/responses', {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                model: process.env.OPENAI_MODEL || 'gpt-4.1-mini',
+                input: [
+                  { role: 'system', content: systemPrompt },
+                  { role: 'user', content: userPrompt }
+                ]
+              })
+            });
+
+            if (!response.ok) {
+              const errorText = await response.text();
+              throw new Error(`OpenAI API error ${response.status}: ${errorText}`);
+            }
+
+            const data = await response.json();
+            const answer = data.output_text || (data.output || []).flatMap(item => item.content || []).map(part => part.text || '').join('\n').trim();
+
+            const commentBody = `${marker}\n### ${departmentName} Response\n\n${answer || 'Cevap üretilemedi.'}`;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issue.number,
+              body: commentBody
+            });
