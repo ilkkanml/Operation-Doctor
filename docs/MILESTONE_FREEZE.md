@@ -11,38 +11,50 @@ Bir milestone freeze edilebilmesi için:
 - QA / Release checklist geçmeli.
 - Açık kritik çelişki kalmamalı.
 - Handoff güncellenmiş olmalı.
+- Aynı milestone için duplicate açık issue bırakılmamalı.
 
 ## Aktif Milestone
-Milestone 0 — Foundation Documents
+Milestone 1 — Core Patient Flow
 
-Durum: Devam ediyor.
+Durum: Milestone 0 freeze edildi. Milestone 1 sıradaki aktif milestone olarak ele alınacak.
 
-## Milestone 0 Hedefleri
-- Master Bible
+## Freeze Kayıtları
+
+### Milestone 0 — Foundation Documents
+```text
+Tarih: 2026-05-23
+Issue: #2 — [Milestone 0] Foundation Freeze Review
+Onaylayan Departman: Studio Director
+Karar: Freeze için uygun.
+Kapsam:
 - Project Bible
+- Master Bible
 - Handoff
 - Milestone Freeze Log
 - Decisions Log
 - Department Rules
 - Department Orchestrator
 - Department prompt dosyaları
-- Start Here dosyası
+- START_HERE dosyaları
 - İlham dosyasının sisteme dahil edilmesi
-
-## Freeze Kayıtları
-Henüz freeze edilmiş milestone yok.
+Test / QA Notu: Foundation dokümanları ve automation yapısı çalışır durumda. Kod, oyun motoru veya prototype aşamasına geçilmedi.
+Risk: İlerleyen milestone'larda scope drift yaratabilecek eklemeler dikkatle kontrol edilmeli.
+Sonraki Adım: Milestone 1 — Core Patient Flow değerlendirmesi.
+```
 
 ## Freeze Kaydı Formatı
 ```text
 Milestone:
 Tarih:
-Commit / PR:
+Issue / PR:
 Onaylayan Departman:
 Kapsam:
 Test / QA Notu:
+Risk:
 Sonraki Adım:
 ```
 
 ## Sonraki Geliştirme Notları
-- Milestone 0 tamamlanınca ilk freeze kaydı buraya eklenmeli.
-- Freeze öncesi Foundation Review issue açılmalı.
+- Milestone 1 tamamlanmadan Milestone 2 aktif ilerletilmeyecek.
+- Her milestone sonrası Handoff güncellenecek.
+- Duplicate issue oluşursa eski/yanlış issue kapatılacak.
