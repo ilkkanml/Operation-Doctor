@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Stage 14 — First Playable Implementation Planning
+Stage 15 — Codex Handoff / Controlled First Shell Tasks
 
-Status: Stage 13 frozen. Stage 14 is next active stage.
+Status: Stage 14 frozen. Stage 15 is next active stage.
 
 ## Freeze Records
 
@@ -177,6 +177,18 @@ Risk: If UI/data/validation boundaries are unclear, implementation planning may 
 Next: Stage 14.
 ```
 
+### Stage 14 — First Playable Implementation Planning
+```text
+Date: 2026-05-24
+Issue: #44
+Support Issues: #45, #46
+Approvers: Technical Architect, Clinical Content Designer, QA & Release Director
+Decision: Approved for freeze if implementation order, Unity shell usage, sample data usage, minimal UI order, and test gate order are clear, with no full production scope.
+Scope: Stage 14 implementation planning, sample data set, implementation plan, Unity shell usage, minimal UI order, test gate order.
+Risk: Stage 14 must not turn into full production. Codex should only receive controlled first shell/task instructions.
+Next: Stage 15.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -189,7 +201,8 @@ Next:
 ```
 
 ## Next Notes
-- Stage 14 should plan implementation tasks only.
-- Do not start full production yet.
+- Stage 15 may be used as the safe Codex handoff point.
+- Codex must start with controlled shell/first task setup only.
+- No full production yet.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
