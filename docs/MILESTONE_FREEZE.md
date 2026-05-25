@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Milestone 8 — Appointment & Follow-Up
+Milestone 9 — Patient Rooms & Recovery
 
-Status: Milestone 7 frozen. Milestone 8 is next active milestone.
+Status: Milestone 8 frozen. Milestone 9 is next active milestone.
 
 ## Freeze Records
 
@@ -105,6 +105,18 @@ Risk: Capacity and queue UI can confuse players if not clearly explained. Milest
 Next: Milestone 8.
 ```
 
+### Milestone 8 — Appointment & Follow-Up
+```text
+Date: 2026-05-24
+Issue: #10
+Support Issues: #27
+Approvers: Studio Director, QA & Release Director
+Decision: Approved for freeze if follow-up, appointment, return visit, progress tracking, reward impact, and Milestone 9 exclusion are clear.
+Scope: Follow-up rule, appointment rule, return visit flow, progress tracking, reward impact, Milestone 9 exclusion.
+Risk: If follow-up and appointment states are not readable, players may miss return visits. Milestone 9 room/recovery systems must not appear early.
+Next: Milestone 9.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -117,6 +129,6 @@ Next:
 ```
 
 ## Next Notes
-- Do not open Milestone 9 before Milestone 8 is complete.
+- Do not open Milestone 10 before Milestone 9 is complete.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
