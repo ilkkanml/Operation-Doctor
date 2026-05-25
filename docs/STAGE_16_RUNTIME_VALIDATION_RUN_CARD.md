@@ -1,5 +1,8 @@
 # Operation: Doctor - Stage 16 Runtime Validation Run Card
 
+## Last Updated
+2026-05-25
+
 ## Purpose
 Coordinate one Unity validation run and produce Report 002 consistently.
 
