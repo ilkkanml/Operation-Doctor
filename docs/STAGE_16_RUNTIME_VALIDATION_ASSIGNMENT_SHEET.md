@@ -214,6 +214,13 @@ Before READY transition:
 3. Related schedule traces (assignment sheet, run card, READY request comment) must be synchronized in the same update cycle.
 4. Missing freeze-window approval or unsynced publish-date updates keep status BLOCKED and require a scoped follow-up issue.
 
+## Assignment Reviewer-Handoff Acknowledgment Guard
+Before READY transition:
+1. When assignment responsibility is handed off (owner/reviewer/approver role), both outgoing and incoming owners must leave explicit acknowledgment trace.
+2. Handoff trace must include `Request ID`, role scope, local timestamp, and effective handoff moment.
+3. Assignment sheet, run card, and READY request trace must reflect the same handoff outcome in the same update cycle.
+4. Missing or one-sided handoff acknowledgment keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
