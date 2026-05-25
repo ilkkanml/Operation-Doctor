@@ -76,5 +76,13 @@ If another document conflicts with these, authority documents win.
 - [ ] `Last Updated` stamps are refreshed for edited docs.
 - [ ] Boundary language still blocks production expansion.
 
+## Emergency Hotfix Doc Path
+Use this path when a critical blocker appears and fast containment is needed:
+1. Update `GATE_STATUS` with blocker summary and keep state `BLOCKED`.
+2. Update `READINESS_SNAPSHOT` blockers and request-id trace status.
+3. Update `RUN_KICKOFF` to confirm `KICKOFF_BLOCKED` and capture affected preconditions.
+4. Update `SESSION_LOG` with blocker note and immediate next action.
+5. Open a scoped fix issue and link it from updated docs.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
