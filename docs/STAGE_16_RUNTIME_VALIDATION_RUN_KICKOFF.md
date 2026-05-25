@@ -45,6 +45,13 @@ Before changing status to KICKOFF_READY or executing the run:
 4. Use the same `Request ID` value in the history row (`READY-REQ-YYYYMMDD-XX`).
 5. If links are missing, Request ID is missing, Request ID format is invalid, or Request ID values do not match, keep kickoff status as KICKOFF_BLOCKED.
 
+## KICKOFF_READY Transition Guard
+Before setting kickoff status to KICKOFF_READY:
+1. Gate authority docs show READY and latest READY history row includes matching Request ID.
+2. READY request and READY confirmation links both resolve and point to the same approval context.
+3. Run owner, backup reviewer, and planned date/time are non-TBD in assignment/run-card records.
+4. If any check fails, keep status as KICKOFF_BLOCKED and open a scoped follow-up issue.
+
 ## Required Inputs
 - `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_READINESS_SNAPSHOT.md`
