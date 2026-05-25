@@ -142,5 +142,12 @@ Keep each docs-only work package intentionally small:
 - [ ] If a PR mixes unrelated governance topics, split into separate PRs.
 - [ ] If boundary review becomes ambiguous, open a follow-up scoped issue instead of expanding current WP.
 
+## Controlled Handoff Duplicate-Work Guard
+Prevent duplicate or overlapping docs-only work packages:
+- [ ] Before opening a new WP, scan open and recently closed `WP-16` issues for the same objective.
+- [ ] If an open issue already covers the objective, continue there instead of opening a new one.
+- [ ] If a duplicate issue is opened by mistake, close it and link the canonical issue/PR.
+- [ ] Keep one canonical issue per objective and reference it in the closure summary.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
