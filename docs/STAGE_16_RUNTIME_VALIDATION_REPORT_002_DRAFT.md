@@ -144,3 +144,10 @@ Before publication:
 2. Final report must preserve the same `Request ID`, `Decision`, and boundary-result lines from the approved draft.
 3. Session log row for the same run must reference the final report path, not the draft path.
 4. If promotion introduces trace mismatch or missing final-path update, keep gate blocked and open a scoped follow-up issue.
+
+## Publication Timestamp Guard
+Before publication:
+1. Record publication date in `YYYY-MM-DD` and publication time in local `HH:MM` format.
+2. Publication timestamp must be greater than or equal to run execution timestamp for the same `Request ID`.
+3. The same publication date must be reflected in session log and closure summary for this run.
+4. If publication timestamp is missing or inconsistent, keep draft pending and block gate progression.
