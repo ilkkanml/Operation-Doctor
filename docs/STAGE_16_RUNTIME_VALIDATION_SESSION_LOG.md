@@ -44,6 +44,22 @@ Next Action:
 - Expansion blocked until resolved: YES/NO
 - Follow-up issue ID:
 
+## Decision Mapping Note
+Use this mapping for consistent logging between run outcome and READY history decision:
+- PASS -> `READY_APPROVED` (when READY checks and confirmations are complete)
+- PARTIAL -> `READY_PENDING_RECHECK` (until scoped fixes and recheck complete)
+- FAIL -> `READY_REJECTED` (gate remains BLOCKED)
+
+Allowed READY decision values are only:
+- `READY_APPROVED`
+- `READY_REJECTED`
+- `READY_PENDING_RECHECK`
+
+If any other READY decision value is used, the READY record is invalid and gate must remain BLOCKED.
+Reference:
+- `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
+- `docs/STAGE_16_RUNTIME_VALIDATION_READY_REQUEST_TEMPLATE.md`
+
 ## Publication Rule
 For each completed run:
 1. Publish or update corresponding report file.
