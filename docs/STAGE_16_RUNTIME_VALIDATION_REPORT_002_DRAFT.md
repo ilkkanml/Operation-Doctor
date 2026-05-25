@@ -95,3 +95,10 @@ Before publication:
 2. PARTIAL/FAIL requires evidence references for every listed failed item or blocker.
 3. Evidence entries must be stable references (repository path, issue/PR link, or archived artifact link).
 4. If evidence trace is missing or ambiguous, keep draft pending and open a scoped follow-up issue.
+
+## Placeholder Clearance Guard
+Before publication:
+1. Replace `(to be filled)` placeholders in `Failed Items` and `Blockers` with explicit content.
+2. If there is no item, write `None` explicitly instead of leaving template text.
+3. Published report must not contain unresolved template markers (`TBD`, `EXAMPLE_`, `<...>`).
+4. If any placeholder remains, keep draft pending and block gate progression.
