@@ -81,6 +81,13 @@ Before READY transition:
 3. If approver changes, prior confirmation is invalid and a new confirmation is required in the same cycle.
 4. Missing or stale approver confirmation keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Backup Reviewer Confirmation Guard
+Before READY transition:
+1. `Backup Reviewer` confirmation must be recorded in a traceable location (issue comment, PR comment, or documented note).
+2. Confirmation must reference the same `Request ID` and planned run date.
+3. If backup reviewer changes, prior confirmation is invalid and a new confirmation is required in the same cycle.
+4. Missing or stale backup-reviewer confirmation keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
