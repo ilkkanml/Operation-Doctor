@@ -53,6 +53,13 @@ Before READY transition:
 3. `Target Run Date` must include explicit local time, and `Target Report Publish Date` must use `YYYY-MM-DD` format.
 4. If schedule ordering or format is inconsistent, keep status BLOCKED and open a scoped follow-up issue.
 
+## Publish Date Trace Guard
+Before READY transition:
+1. `Target Report Publish Date` must be consistent with planned publish date references in run card and session log planning notes.
+2. If publish date changes in assignment sheet, corresponding publish-date references must be updated in the same update cycle.
+3. Publish-date references must use `YYYY-MM-DD` format across related docs.
+4. If publish-date trace is missing or inconsistent, keep status BLOCKED and open a scoped follow-up issue.
+
 ## Request ID Date Alignment Guard
 Before READY transition:
 1. The `YYYYMMDD` segment in `Request ID` must match the date portion of `Target Run Date`.
