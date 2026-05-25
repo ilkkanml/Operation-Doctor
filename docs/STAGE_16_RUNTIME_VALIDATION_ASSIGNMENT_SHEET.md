@@ -32,6 +32,13 @@ Validation note:
 - If any `EXAMPLE_` value remains, gate must stay BLOCKED.
 - Request ID must match READY request comment, run card, and gate history row.
 
+## Assignment Completeness Guard
+Before READY transition:
+1. `Request ID`, `Run Owner`, `Backup Reviewer`, and `Report Approver` are non-empty and non-TBD.
+2. `Target Run Date` and `Target Report Publish Date` are set and not template placeholders.
+3. No `EXAMPLE_` values remain in active assignment fields.
+4. If any field is incomplete, keep gate/kickoff status BLOCKED and open a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
