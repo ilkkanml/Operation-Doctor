@@ -1,5 +1,8 @@
 # Operation: Doctor - Stage 16 Runtime Validation Assignment Sheet
 
+## Last Updated
+2026-05-25
+
 ## Purpose
 Assign clear ownership for Unity validation execution and Report 002 publication.
 
