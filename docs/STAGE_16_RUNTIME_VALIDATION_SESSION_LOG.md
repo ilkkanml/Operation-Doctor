@@ -84,6 +84,13 @@ Before closing a run row:
 3. Linked PR must be merged before run row can be treated as complete.
 4. If report/PR linkage is missing or inconsistent, keep status BLOCKED and open a scoped follow-up issue.
 
+## Run ID Uniqueness Guard
+Before adding or finalizing a real run row:
+1. `Run ID` must be unique across all real run rows in the table.
+2. Template/example rows (`RUN-EXAMPLE-...`) must not be reused for real executions.
+3. If a row is corrected, keep the same `Run ID`; do not duplicate with a second row for the same run.
+4. If duplicate `Run ID` is detected, keep status BLOCKED and open a scoped follow-up issue.
+
 ## Boundary Reminder
 Session log examples do not authorize runtime expansion or production rollout.
 Canonical gate authority remains:
