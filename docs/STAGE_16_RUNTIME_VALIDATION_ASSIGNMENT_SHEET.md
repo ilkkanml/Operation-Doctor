@@ -144,6 +144,13 @@ Before READY transition:
 3. If `Target Run Date` changes outside confirmed availability window, availability confirmation must be refreshed in the same update cycle.
 4. Missing or stale availability-window confirmation keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Evidence-Link Completeness Guard
+Before READY transition:
+1. Assignment record must reference current run card path and planned report path for the same `Request ID`.
+2. If confirmations are captured in issue/PR comments, assignment trace must include canonical links to those comments.
+3. When referenced artifacts or comment locations change, links must be updated in the same update cycle.
+4. Missing, stale, or broken evidence links keep status BLOCKED and require a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
