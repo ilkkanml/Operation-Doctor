@@ -88,3 +88,10 @@ Before publication:
 2. `Date` must use `YYYY-MM-DD` format.
 3. `Request ID` date segment (`YYYYMMDD`) must match `Date` for the same run.
 4. If metadata is incomplete or inconsistent, keep draft pending and block gate progression.
+
+## Evidence Trace Guard
+Before publication:
+1. PASS requires non-empty `Console Summary` and at least one screenshot or equivalent evidence reference.
+2. PARTIAL/FAIL requires evidence references for every listed failed item or blocker.
+3. Evidence entries must be stable references (repository path, issue/PR link, or archived artifact link).
+4. If evidence trace is missing or ambiguous, keep draft pending and open a scoped follow-up issue.
