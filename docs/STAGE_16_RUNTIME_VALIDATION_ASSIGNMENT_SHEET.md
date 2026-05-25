@@ -151,6 +151,13 @@ Before READY transition:
 3. When referenced artifacts or comment locations change, links must be updated in the same update cycle.
 4. Missing, stale, or broken evidence links keep status BLOCKED and require a scoped follow-up issue.
 
+## Assignment Request-ID Uniqueness Guard
+Before READY transition:
+1. `Request ID` must be unique for each Stage 16 validation run and must not be reused.
+2. READY request comment, run card, and assignment sheet must reference only one active `Request ID` for the same run.
+3. If duplicate or conflicting `Request ID` usage is found, generate a new `Request ID` and propagate updates in the same cycle.
+4. Unresolved `Request ID` duplication keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
