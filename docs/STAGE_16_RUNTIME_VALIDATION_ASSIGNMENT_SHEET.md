@@ -200,6 +200,13 @@ Before READY transition:
 3. If there is no progress in the last 48 hours, escalation note must reference responsible owner/approver handoff.
 4. Missing blocker-aging update keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Reference Snapshot Guard
+Before READY transition:
+1. READY trace must include snapshot identifiers (for example commit SHA or revision reference) for assignment sheet and run card linked to the same `Request ID`.
+2. If either referenced artifact changes after snapshot capture, READY must be revalidated with refreshed snapshot identifiers.
+3. Snapshot identifiers must be traceable from gate-history row and READY request comment for the same run.
+4. Missing or stale snapshot references keep status BLOCKED and require a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
