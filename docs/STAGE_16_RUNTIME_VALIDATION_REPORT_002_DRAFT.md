@@ -116,3 +116,10 @@ Before publication:
 2. Group-level result (`A`/`B`/`C`/`D`) must use the same allowed status vocabulary.
 3. If any item in a group is `FAIL`, that group cannot be marked `PASS`.
 4. If status vocabulary or group rollup is inconsistent, keep draft pending and block gate progression.
+
+## Decision Field Finalization Guard
+Before publication:
+1. Replace the template decision text (`PASS / PARTIAL / FAIL`) with exactly one final value.
+2. Final value must be one of `PASS`, `PARTIAL`, or `FAIL` only.
+3. Published decision line must not contain separators or multi-value text (`/`, `,`, `or`).
+4. If decision field remains template-like or multi-valued, keep draft pending and block gate progression.
