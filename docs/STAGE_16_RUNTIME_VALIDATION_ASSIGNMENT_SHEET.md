@@ -242,6 +242,13 @@ Before READY transition:
 3. If `Run Owner` is unavailable, `Backup Reviewer` must post temporary acknowledgment and notify `Report Approver` in the same cycle.
 4. Missing late-status escalation acknowledgment keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Follow-Up Deadline Guard
+Before READY transition:
+1. Each assignment escalation for the same `Request ID` must define a concrete follow-up deadline in local `YYYY-MM-DD HH:MM` format.
+2. Follow-up deadline trace must name responsible owner (`Run Owner` or delegated role) and expected unblock checkpoint.
+3. If follow-up deadline passes without update, escalation must be re-acknowledged by owner and re-notified to `Report Approver` in the same cycle.
+4. Missing or expired follow-up deadline trace keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
