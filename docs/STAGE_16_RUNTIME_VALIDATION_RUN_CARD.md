@@ -1,4 +1,4 @@
-# Operation: Doctor — Stage 16 Runtime Validation Run Card
+# Operation: Doctor - Stage 16 Runtime Validation Run Card
 
 ## Purpose
 Coordinate one Unity validation run and produce Report 002 consistently.
@@ -9,6 +9,19 @@ Coordinate one Unity validation run and produce Report 002 consistently.
 - Planned Date:
 - Unity Version:
 - Scene Name:
+
+## Filled Example Block (Template Only)
+Use this block as format guidance only.
+Replace every `EXAMPLE_` value before run kickoff.
+
+- Run Owner: EXAMPLE_RunOwner_Name
+- Backup Reviewer: EXAMPLE_BackupReviewer_Name
+- Planned Date: EXAMPLE_2026-05-26 10:30 (local time)
+- Unity Version: EXAMPLE_Unity_6000.0.x
+- Scene Name: EXAMPLE_FirstPlayableScene
+
+Validation note:
+- If any `EXAMPLE_` value remains, kickoff must stay BLOCKED.
 
 ## Pre-Run Checklist
 - [ ] `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md` opened
