@@ -74,6 +74,13 @@ Before READY transition:
 3. Any documented temporary mismatch must include explicit reason and owner in notes, with gate status remaining BLOCKED.
 4. If cross-document sync is missing or inconsistent, stop transition and open a scoped follow-up issue.
 
+## Report Approver Confirmation Guard
+Before READY transition:
+1. `Report Approver` confirmation must be recorded in a traceable location (issue comment, PR comment, or documented note).
+2. Confirmation must reference the same `Request ID` and planned run/publish dates.
+3. If approver changes, prior confirmation is invalid and a new confirmation is required in the same cycle.
+4. Missing or stale approver confirmation keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
