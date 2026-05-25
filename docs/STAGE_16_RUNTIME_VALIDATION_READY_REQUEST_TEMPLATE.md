@@ -14,6 +14,14 @@ READY decision authority remains:
 
 If comments conflict with these records, gate records win.
 
+## Minimum Decision Values
+Use only these decision values in READY communication:
+- `READY_APPROVED`
+- `READY_REJECTED`
+- `READY_PENDING_RECHECK`
+
+Any other decision value is invalid for gate logging.
+
 ## Template A - READY Request (Run Owner)
 Copy/paste and replace all placeholders:
 
@@ -77,9 +85,33 @@ Missing items:
 Required action:
 Complete missing items and re-submit READY request with updated evidence links.
 
+Decision:
+- Gate transition authorization: READY_REJECTED
+
 Gate remains BLOCKED.
+```
+
+## Template D - READY Pending Recheck (Optional)
+Use this when evidence is partial but no final rejection is made:
+
+```text
+READY pending recheck: additional verification needed.
+
+Reviewer: <name>
+Timestamp: <YYYY-MM-DD HH:MM local>
+
+Pending checks:
+1. <item>
+2. <item>
+
+Decision:
+- Gate transition authorization: READY_PENDING_RECHECK
+
+Action:
+Complete pending checks and update READY request history row.
 ```
 
 ## Usage Rule
 - All placeholders must be replaced before posting.
 - If any placeholder remains, the comment is invalid for gate decision.
+- If decision value is outside the minimum set, the record is invalid and gate must remain BLOCKED.
