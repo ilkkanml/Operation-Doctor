@@ -1,0 +1,13 @@
+{
+  "manifest_id": "first_slice_placeholder_manifest",
+  "version": 1,
+  "groups": [
+    "visitor_sample",
+    "scenario_sample",
+    "check_sample",
+    "action_sample",
+    "result_sample",
+    "reward_sample"
+  ],
+  "note": "Placeholder-only manifest for Stage 16 T2 data loader hook."
+}
