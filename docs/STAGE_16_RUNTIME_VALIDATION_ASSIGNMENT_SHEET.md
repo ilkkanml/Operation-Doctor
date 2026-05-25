@@ -137,6 +137,13 @@ Before READY transition:
 3. If run-date timezone context changes, linked schedule references and confirmations must be refreshed in the same update cycle.
 4. Missing or inconsistent timezone labeling keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Owner Availability Window Guard
+Before READY transition:
+1. `Run Owner` and `Backup Reviewer` must confirm availability window covering the planned `Target Run Date` slot.
+2. Availability confirmation must include local date/time range and timezone context.
+3. If `Target Run Date` changes outside confirmed availability window, availability confirmation must be refreshed in the same update cycle.
+4. Missing or stale availability-window confirmation keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
