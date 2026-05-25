@@ -60,6 +60,13 @@ Before entering publish flow:
 3. Remaining gaps must appear in blockers and next-action fields.
 4. If checklist state is ambiguous, stop and open a scoped follow-up issue.
 
+## Post-Run Trace Sync Guard
+Before entering publish flow:
+1. `Request ID` must match across run card, report draft, and session log row for the same run.
+2. Decision and next-action owner in run card must match the report draft values.
+3. If decision is PARTIAL/FAIL, follow-up issue ID must be recorded in both run card and report draft.
+4. Any trace mismatch keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Publish Flow
 1. Save completed report as `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002.md`
 2. Open a small docs-only PR with report file
