@@ -172,6 +172,13 @@ Before READY transition:
 3. Placeholder cleanup or regression fixes must be logged in assignment change-log with updater identity and local timestamp.
 4. Any placeholder regression keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Gate-History Backlink Guard
+Before READY transition:
+1. Assignment trace for each `Request ID` must reference the matching gate-history row identifier/location.
+2. The referenced gate-history row must include a backlink to the same assignment record or issue/PR context.
+3. If gate-history row is moved or regenerated, assignment and gate-history backlinks must be updated in the same cycle.
+4. Missing or one-way linkage keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
