@@ -52,6 +52,13 @@ Before setting kickoff status to KICKOFF_READY:
 3. Run owner, backup reviewer, and planned date/time are non-TBD in assignment/run-card records.
 4. If any check fails, keep status as KICKOFF_BLOCKED and open a scoped follow-up issue.
 
+## KICKOFF_READY Reversion Guard
+If readiness regresses after status was marked KICKOFF_READY:
+1. Set kickoff status back to KICKOFF_BLOCKED immediately.
+2. Record the regression reason in readiness snapshot/session log.
+3. Ensure gate authority docs and READY history reflect the new blocker state.
+4. Open a scoped follow-up issue before retrying kickoff readiness.
+
 ## Required Inputs
 - `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_READINESS_SNAPSHOT.md`
