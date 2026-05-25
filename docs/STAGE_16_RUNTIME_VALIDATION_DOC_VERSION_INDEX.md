@@ -191,5 +191,12 @@ After merge, verify repository state matches closure summary:
 - [ ] Default branch reflects the expected docs-only change.
 - [ ] Open `WP-16` query shows no overlapping open objective.
 
+## Controlled Handoff Closeout Audit Guard
+At closure, run a final audit across summary + repository state:
+- [ ] Issue, PR, and merge SHA in the summary match live repository records.
+- [ ] Changed-file list is complete and docs-only.
+- [ ] Boundary result in summary matches actual scope (no production start, no expansion, no shell break).
+- [ ] Any follow-up action is captured as a new scoped issue, not silently deferred.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
