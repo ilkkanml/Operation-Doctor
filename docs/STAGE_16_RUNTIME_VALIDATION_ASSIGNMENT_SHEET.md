@@ -221,6 +221,13 @@ Before READY transition:
 3. Assignment sheet, run card, and READY request trace must reflect the same handoff outcome in the same update cycle.
 4. Missing or one-sided handoff acknowledgment keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment READY-Request Consistency Stamp Guard
+Before READY transition:
+1. READY request trace must include a consistency stamp summarizing `Request ID`, role owners, `Target Run Date`, and `Target Report Publish Date` from assignment sheet.
+2. If any stamped field changes after stamp creation, the stamp is invalid and must be regenerated in the same update cycle.
+3. The same consistency stamp reference must be visible from assignment sheet note, run card note, and READY request comment.
+4. Missing or stale consistency stamp keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
