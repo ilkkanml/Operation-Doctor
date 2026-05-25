@@ -81,3 +81,10 @@ Before publication:
 2. The mapped READY decision must appear in gate status history for the same `Request ID`.
 3. Any non-allowed READY value invalidates publication and gate remains BLOCKED.
 4. If mapping update is missing or inconsistent, keep draft pending and open a scoped follow-up issue.
+
+## Metadata Completeness Guard
+Before publication:
+1. `Request ID`, `Date`, `Validator`, `Scene`, and `Unity Version` must be non-empty.
+2. `Date` must use `YYYY-MM-DD` format.
+3. `Request ID` date segment (`YYYYMMDD`) must match `Date` for the same run.
+4. If metadata is incomplete or inconsistent, keep draft pending and block gate progression.
