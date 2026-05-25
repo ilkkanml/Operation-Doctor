@@ -186,6 +186,13 @@ Before READY transition:
 3. If response window is exceeded, assignment remains BLOCKED until exception reason and recovery plan are logged.
 4. Missing or late escalation-response trace keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Run-Slot Conflict Guard
+Before READY transition:
+1. Planned `Target Run Date` slot for a `Request ID` must not conflict with another active validation run owned by the same required roles.
+2. If a slot conflict exists, assignment must document conflict resolution (reschedule or role reassignment) before READY.
+3. Conflict resolution updates must be reflected in assignment sheet, run card, and READY request trace in the same cycle.
+4. Unresolved run-slot conflict keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
