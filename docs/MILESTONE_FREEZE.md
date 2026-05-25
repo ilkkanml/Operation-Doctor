@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Stage 10 — Advanced Expansion Review
+Stage 11 — Implementation Planning
 
-Status: Stage 9 frozen. Stage 10 is next active stage.
+Status: Stage 10 frozen. Stage 11 is next active stage.
 
 ## Freeze Records
 
@@ -129,6 +129,18 @@ Risk: If capacity, support role, or item effects are unclear, players may misund
 Next: Stage 10.
 ```
 
+### Stage 10 — Optional Economy Boundaries
+```text
+Date: 2026-05-24
+Issue: #31
+Support Issues: #32, #33
+Approvers: Studio Director, Game & Systems Designer, QA & Release Director
+Decision: Approved for freeze if optional economy rules are clear, transparent, and do not create direct power advantage.
+Scope: Trust boundary, optional convenience rule, no power advantage rule, economy guard, visibility limit, no new core system.
+Risk: If optional economy effects are unclear, players may lose trust. If effects become too strong, balance can break.
+Next: Stage 11.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -141,6 +153,6 @@ Next:
 ```
 
 ## Next Notes
-- Do not open the next stage before Stage 10 scope is reviewed.
+- Stage 11 should focus on implementation planning, not full production.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
