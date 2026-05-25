@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Stage 13 — First Playable Task Breakdown
+Stage 14 — First Playable Implementation Planning
 
-Status: Stage 12 frozen. Stage 13 is next active stage.
+Status: Stage 13 frozen. Stage 14 is next active stage.
 
 ## Freeze Records
 
@@ -165,6 +165,18 @@ Risk: Missing folders or unclear setup docs can slow later integration. Gameplay
 Next: Stage 13.
 ```
 
+### Stage 13 — Work Package Breakdown
+```text
+Date: 2026-05-24
+Issue: #42
+Support Issues: #43
+Approvers: Game & Systems Designer, QA & Release Director
+Decision: Approved for freeze if work package document, minimum loop, UI boundary, data boundary, and validation boundary are clear, with no prototype scope.
+Scope: Work package groups, minimum loop items, UI boundary, data boundary, validation boundary, no prototype or production scope.
+Risk: If UI/data/validation boundaries are unclear, implementation planning may drift or repeat work.
+Next: Stage 14.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -177,7 +189,7 @@ Next:
 ```
 
 ## Next Notes
-- Stage 13 should break down the first playable tasks.
+- Stage 14 should plan implementation tasks only.
 - Do not start full production yet.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
