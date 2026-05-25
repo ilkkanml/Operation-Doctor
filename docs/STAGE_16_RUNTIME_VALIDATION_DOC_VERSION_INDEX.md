@@ -177,5 +177,12 @@ Keep WP naming consistent across trace points:
 - [ ] PR title includes the same `WP-16-XX` identifier.
 - [ ] Final closure summary references the same `WP-16-XX` identifier.
 
+## Controlled Handoff Merge-Readiness Guard
+Before merge, confirm docs-only readiness checks are complete:
+- [ ] PR scope is still docs-only and limited to intended file(s).
+- [ ] Canonical authority and boundary wording remain consistent.
+- [ ] Issue body, PR body, and closure summary all point to the same WP objective.
+- [ ] No open overlapping `WP-16` issue remains for the same objective.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
