@@ -156,5 +156,12 @@ Before closing a docs-only WP, verify references are valid:
 - [ ] Changed-file path references match actual modified docs.
 - [ ] Referenced canonical docs (`GATE_STATUS`, `GATE_RECORD_002`) names/paths are accurate.
 
+## Controlled Handoff Date-Consistency Guard
+Before closing a docs-only WP, validate date consistency:
+- [ ] `Last Updated` reflects the effective update date in `YYYY-MM-DD` format.
+- [ ] Final closure summary date matches the same calendar date unless explicitly noted.
+- [ ] If a request ID includes a date segment (`YYYYMMDD`), it matches the documented request date.
+- [ ] Avoid relative date wording (today/yesterday/tomorrow) in closure records.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
