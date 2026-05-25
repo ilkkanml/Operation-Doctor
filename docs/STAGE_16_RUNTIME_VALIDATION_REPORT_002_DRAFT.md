@@ -102,3 +102,10 @@ Before publication:
 2. If there is no item, write `None` explicitly instead of leaving template text.
 3. Published report must not contain unresolved template markers (`TBD`, `EXAMPLE_`, `<...>`).
 4. If any placeholder remains, keep draft pending and block gate progression.
+
+## Boundary Result Recording Guard
+Before publication:
+1. Record boundary outcomes using explicit lines for `full production start`, `scope expansion`, and `Unity shell boundary break`.
+2. Each boundary line must use fixed binary wording: `yes` or `no`.
+3. Ordering of boundary lines must remain: full production start -> scope expansion -> Unity shell boundary break.
+4. If boundary lines are missing, non-binary, or out of order, keep draft pending and block gate progression.
