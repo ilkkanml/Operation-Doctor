@@ -4,16 +4,21 @@
 Assign clear ownership for Unity validation execution and Report 002 publication.
 
 ## Assignment Fields
+- Request ID:
 - Run Owner:
 - Backup Reviewer:
 - Report Approver:
 - Target Run Date:
 - Target Report Publish Date:
 
+Request ID format:
+- `READY-REQ-YYYYMMDD-XX`
+
 ## Filled Example Block (Template Only)
 Use this block as format guidance only.
 Replace every `EXAMPLE_` value before any READY request.
 
+- Request ID: EXAMPLE_READY-REQ-20260525-01
 - Run Owner: EXAMPLE_RunOwner_Name
 - Backup Reviewer: EXAMPLE_BackupReviewer_Name
 - Report Approver: EXAMPLE_ReportApprover_Name
@@ -22,6 +27,7 @@ Replace every `EXAMPLE_` value before any READY request.
 
 Validation note:
 - If any `EXAMPLE_` value remains, gate must stay BLOCKED.
+- Request ID must match READY request comment, run card, and gate history row.
 
 ## Responsibilities
 ### Run Owner
