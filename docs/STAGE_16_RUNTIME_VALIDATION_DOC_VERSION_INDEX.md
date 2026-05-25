@@ -170,5 +170,12 @@ Keep core boundary phrases stable across docs-only updates:
 - [ ] Preserve `no Unity shell boundary break` wording in checklist/summary boundaries.
 - [ ] If a wording change is needed, stop and open a new scoped issue with explicit rationale.
 
+## Controlled Handoff Naming-Consistency Guard
+Keep WP naming consistent across trace points:
+- [ ] Issue title includes the intended `WP-16-XX` identifier.
+- [ ] Branch name includes the same `WP-16-XX` identifier.
+- [ ] PR title includes the same `WP-16-XX` identifier.
+- [ ] Final closure summary references the same `WP-16-XX` identifier.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
