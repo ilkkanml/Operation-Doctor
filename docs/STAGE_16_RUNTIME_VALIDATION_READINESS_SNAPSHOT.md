@@ -1,18 +1,25 @@
-# Operation: Doctor — Stage 16 Runtime Validation Readiness Snapshot
+# Operation: Doctor - Stage 16 Runtime Validation Readiness Snapshot
 
 ## Date
 2026-05-25
 
 ## Purpose
-Show whether the project is ready to execute Unity validation and publish Report 002.
+Show whether the project is authorized to execute Unity validation and publish Report 002.
 
 ## Current Readiness State
-READY_FOR_UNITY_RUN
+BLOCKED
 
 Interpretation:
 - Required docs and runtime placeholder slices are prepared.
-- Unity execution pass is the next required action.
-- Broader runtime expansion remains blocked until Report 002 decision.
+- Validation authorization is currently blocked.
+- Gate must flip to READY before Unity execution can start.
+
+## Canonical Source of Truth
+Gate state authority is:
+- `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
+- `docs/STAGE_16_RUNTIME_VALIDATION_GATE_RECORD_002.md`
+
+If any readiness document conflicts with these two records, gate records win.
 
 ## Prepared Assets
 - `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md`
@@ -21,16 +28,19 @@ Interpretation:
 - `docs/STAGE_16_RUNTIME_VALIDATION_RUN_CARD.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002_DRAFT.md`
 
-## Required Actions Before Report 002 Finalization
-1. Assign run owner and schedule in run card.
-2. Execute Unity scene checks (A/B/C/D groups).
-3. Fill evidence table and console summary.
-4. Publish completed `REPORT_002` as docs PR.
+## Missing Fields Before READY
+1. Assign Run Owner in assignment sheet.
+2. Assign Backup Reviewer and Report Approver.
+3. Set target run date/time.
+4. Set target scene and Unity version in run card.
+5. Complete run card pre-run checklist.
+6. Record written READY confirmations from Run Owner and Report Approver.
 
 ## Blockers (Current)
-- B1: Unity editor execution has not been performed in this workflow yet.
-- B2: Inspector reference validation is pending live run.
-- B3: Play-mode smoke verification is pending live run.
+- B1: Owner/reviewer/approver fields are still empty.
+- B2: Planned run date/time is missing.
+- B3: Scene target and Unity version are missing.
+- B4: Written confirmations for BLOCKED -> READY are missing.
 
 ## Owner Placeholders
 - Run Owner: TBD
@@ -38,8 +48,8 @@ Interpretation:
 - Validation Date: TBD
 
 ## Go / No-Go Rule
-- GO: Report 002 published with PASS or acceptable PARTIAL + scoped fix plan.
-- NO-GO: FAIL with unresolved critical reference/state errors.
+- GO: Gate status is READY and Unity validation run can start.
+- NO-GO: Gate status is BLOCKED for any missing mandatory condition.
 
 ## Boundary Reminder
-No production expansion is allowed from this snapshot alone. Only scoped validation execution and fixes are allowed.
+No production expansion is allowed from this snapshot. Only scoped validation preparation and execution are allowed after gate is READY.

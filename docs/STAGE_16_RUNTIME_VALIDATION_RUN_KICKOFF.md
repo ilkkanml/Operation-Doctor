@@ -1,20 +1,39 @@
-# Operation: Doctor — Stage 16 Runtime Validation Run Kickoff
+# Operation: Doctor - Stage 16 Runtime Validation Run Kickoff
 
 ## Date
 2026-05-25
 
 ## Purpose
-Formally mark the project ready to execute the first Unity validation run for Report 002.
+Track kickoff readiness without overriding gate authority.
 
 ## Kickoff Status
-KICKOFF_READY
+KICKOFF_BLOCKED
 
-## Preconditions
-- Readiness snapshot exists and indicates `READY_FOR_UNITY_RUN`.
-- Validation packet, run card, and Report 002 draft are available.
-- Scope boundary remains first-playable placeholder only.
+## Canonical Gate Authority
+Kickoff status must follow:
+- `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
+- `docs/STAGE_16_RUNTIME_VALIDATION_GATE_RECORD_002.md`
+
+Current authority state is BLOCKED.
+
+## Current Block Reasons
+- Run Owner is not assigned.
+- Backup Reviewer and Report Approver are not assigned.
+- Planned run date/time is not set.
+- Scene target and Unity version are not set in run card.
+- Written READY confirmations are not recorded yet.
+
+## Preconditions for KICKOFF_READY
+All must be true before executing the run:
+1. Gate status is updated to READY by authorized roles.
+2. Owner and backup reviewer are assigned.
+3. Run card pre-run checklist is complete.
+4. Validation packet is opened and ready.
+5. Report 002 draft is copied for final fill.
+6. No boundary-breaking runtime changes are pending.
 
 ## Required Inputs
+- `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_READINESS_SNAPSHOT.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_RUN_CARD.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_PACKET.md`
@@ -27,14 +46,6 @@ KICKOFF_READY
 - Scene Target: TBD
 - Unity Version: TBD
 
-## Go-Signal Criteria
-All must be true before executing run:
-1. Owner and backup reviewer assigned.
-2. Run card pre-run checklist complete.
-3. Validation packet opened and ready.
-4. Report 002 draft copied for final fill.
-5. No new boundary-breaking runtime changes pending.
-
 ## Post-Run Publish Rule
 After Unity run completes:
 1. Fill Report 002 with PASS/FAIL/NOT_RUN values and evidence.
@@ -42,5 +53,5 @@ After Unity run completes:
 3. If FAIL/PARTIAL, open scoped fix issue before any expansion.
 
 ## Boundary Reminder
-This kickoff record authorizes validation execution only.
-It does not authorize production-scale expansion.
+This kickoff record does not authorize production-scale expansion.
+It authorizes validation execution only after gate state is READY.
