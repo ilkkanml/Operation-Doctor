@@ -184,5 +184,12 @@ Before merge, confirm docs-only readiness checks are complete:
 - [ ] Issue body, PR body, and closure summary all point to the same WP objective.
 - [ ] No open overlapping `WP-16` issue remains for the same objective.
 
+## Controlled Handoff Post-Merge Verification Guard
+After merge, verify repository state matches closure summary:
+- [ ] PR is `merged` and merge commit SHA is captured in closure notes.
+- [ ] Linked issue is `closed` with completion state.
+- [ ] Default branch reflects the expected docs-only change.
+- [ ] Open `WP-16` query shows no overlapping open objective.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
