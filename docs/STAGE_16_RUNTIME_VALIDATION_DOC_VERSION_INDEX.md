@@ -118,5 +118,14 @@ After completing any Stage 16 docs-only task:
 - [ ] Confirm the PR merged and the linked issue state is `closed`.
 - [ ] Re-check open `WP-16` issues to avoid overlapping parallel scope.
 
+## Controlled Handoff Summary Contract
+Each docs-only closure summary should include:
+- [ ] Date (`YYYY-MM-DD`)
+- [ ] Issue link + final state
+- [ ] PR link + merge state
+- [ ] Changed file list (docs-only)
+- [ ] Boundary check result (no production start, no scope expansion, no shell break)
+- [ ] Open `WP-16` issue status after merge
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
