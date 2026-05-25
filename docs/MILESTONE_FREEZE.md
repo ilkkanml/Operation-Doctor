@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Stage 12 — Unity Shell Preparation
+Stage 13 — First Playable Task Breakdown
 
-Status: Stage 11 frozen. Stage 12 is next active stage.
+Status: Stage 12 frozen. Stage 13 is next active stage.
 
 ## Freeze Records
 
@@ -153,6 +153,18 @@ Risk: Unity setup complexity and scope creep must be controlled. No production i
 Next: Stage 12.
 ```
 
+### Stage 12 — Unity Shell Preparation
+```text
+Date: 2026-05-24
+Issue: #40
+Support Issues: #41
+Approvers: Technical Architect, QA & Release Director
+Decision: Approved for freeze if shell folders, setup guide, placeholder data location, and BuildScripts placeholder exist, with no gameplay/prototype content.
+Scope: Shell folders, README_ShellSetup, placeholder data folder, BuildScripts placeholder, no gameplay scripts, no prototype scope.
+Risk: Missing folders or unclear setup docs can slow later integration. Gameplay content must not enter shell stage.
+Next: Stage 13.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -165,7 +177,7 @@ Next:
 ```
 
 ## Next Notes
-- Stage 12 should prepare the Unity shell structure carefully.
-- No full prototype until shell/setup gate is approved.
+- Stage 13 should break down the first playable tasks.
+- Do not start full production yet.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
