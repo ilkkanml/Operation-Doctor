@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Milestone 7 — Department Capacity
+Milestone 8 — Appointment & Follow-Up
 
-Status: Milestone 6 frozen. Milestone 7 is next active milestone.
+Status: Milestone 7 frozen. Milestone 8 is next active milestone.
 
 ## Freeze Records
 
@@ -93,6 +93,18 @@ Risk: If staff state values are unclear, the management layer can feel confusing
 Next: Milestone 7.
 ```
 
+### Milestone 7 — Department Capacity
+```text
+Date: 2026-05-24
+Issue: #16
+Support Issues: #26
+Approvers: Studio Director, QA & Release Director
+Decision: Approved for freeze if capacity, queue, upgrade, and combined effects are readable and no Milestone 8 systems are included.
+Scope: Department capacity rule, queue rule, capacity upgrade rule, staff/device/room effect clarity, patient-flow balance.
+Risk: Capacity and queue UI can confuse players if not clearly explained. Milestone 8 follow-up systems must not appear early.
+Next: Milestone 8.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -105,6 +117,6 @@ Next:
 ```
 
 ## Next Notes
-- Do not open Milestone 8 before Milestone 7 is complete.
+- Do not open Milestone 9 before Milestone 8 is complete.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
