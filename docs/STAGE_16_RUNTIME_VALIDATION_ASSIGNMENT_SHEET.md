@@ -158,6 +158,13 @@ Before READY transition:
 3. If duplicate or conflicting `Request ID` usage is found, generate a new `Request ID` and propagate updates in the same cycle.
 4. Unresolved `Request ID` duplication keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Placeholder-Regression Guard
+Before READY transition:
+1. After active fields are filled, placeholder markers (`EXAMPLE_`, `TBD`, `TODO`) must not reappear in assignment-critical fields.
+2. Related run card and READY request traces for the same `Request ID` must also be free of placeholder markers.
+3. Placeholder cleanup or regression fixes must be logged in assignment change-log with updater identity and local timestamp.
+4. Any placeholder regression keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
