@@ -8,15 +8,15 @@ Bir milestone freeze edilebilmesi için:
 
 - İlgili dosyalar repo içinde bulunmalı.
 - Studio Director onayı olmalı.
-- QA / Release checklist geçmeli.
+- Gerekli destek issue'ları cevaplanmalı.
 - Açık kritik çelişki kalmamalı.
 - Handoff güncellenmiş olmalı.
 - Aynı milestone için duplicate açık issue bırakılmamalı.
 
 ## Aktif Milestone
-Milestone 1 — Core Patient Flow
+Milestone 2 — Basic Exam & Diagnosis
 
-Durum: Milestone 0 freeze edildi. Milestone 1 sıradaki aktif milestone olarak ele alınacak.
+Durum: Milestone 1 freeze edildi. Milestone 2 sıradaki aktif milestone olarak ele alınacak.
 
 ## Freeze Kayıtları
 
@@ -42,6 +42,25 @@ Risk: İlerleyen milestone'larda scope drift yaratabilecek eklemeler dikkatle ko
 Sonraki Adım: Milestone 1 — Core Patient Flow değerlendirmesi.
 ```
 
+### Milestone 1 — Core Patient Flow
+```text
+Tarih: 2026-05-24
+Issue: #3 — [Milestone 1] Core Patient Flow Review
+Destek Issue'ları: #18, #19
+Onaylayan Departmanlar: Studio Director, Clinical Content Designer, Game & Systems Designer
+Karar: Freeze için uygun.
+Kapsam:
+- Hasta kabul akışı
+- İlk değerlendirme öncelik kuralları
+- Basit hasta seçimi
+- Muayene başlatma akışı
+- Minimal zamanlama ve geri bildirim standardı
+- Milestone 1 dışı sistemlerin sonraya bırakılması
+Test / QA Notu: Erken oyun için basit öncelik sistemi ve temel timing flow yeterli görüldü. Test sistemi derinleştirmesi sonraki milestone'lara bırakıldı.
+Risk: Erken oyun fazla basit kalabilir; Milestone 2 ve 3 içinde test ve tanı ayrıntıları kontrollü eklenmeli.
+Sonraki Adım: Milestone 2 — Basic Exam & Diagnosis.
+```
+
 ## Freeze Kaydı Formatı
 ```text
 Milestone:
@@ -55,6 +74,6 @@ Sonraki Adım:
 ```
 
 ## Sonraki Geliştirme Notları
-- Milestone 1 tamamlanmadan Milestone 2 aktif ilerletilmeyecek.
+- Milestone 2 tamamlanmadan Milestone 3 aktif ilerletilmeyecek.
 - Her milestone sonrası Handoff güncellenecek.
 - Duplicate issue oluşursa eski/yanlış issue kapatılacak.
