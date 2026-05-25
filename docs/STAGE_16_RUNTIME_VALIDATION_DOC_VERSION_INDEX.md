@@ -198,5 +198,12 @@ At closure, run a final audit across summary + repository state:
 - [ ] Boundary result in summary matches actual scope (no production start, no expansion, no shell break).
 - [ ] Any follow-up action is captured as a new scoped issue, not silently deferred.
 
+## Controlled Handoff Boundary-Result Format Guard
+Keep boundary result reporting in a fixed closure format:
+- [ ] Use explicit lines for `full production`, `scope expansion`, and `Unity shell boundary` outcomes.
+- [ ] Report each line as a binary result (`yes/no` or equivalent fixed wording).
+- [ ] Keep ordering consistent across closure summaries for quick comparison.
+- [ ] If wording format changes, open a scoped issue before adopting the new format.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
