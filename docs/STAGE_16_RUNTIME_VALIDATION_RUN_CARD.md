@@ -53,6 +53,13 @@ Validation note:
 - [ ] Decision set to PASS / PARTIAL / FAIL
 - [ ] Next action and owner recorded
 
+## Checklist Completion Guard
+Before entering publish flow:
+1. Every checklist item is either completed or explicitly marked NOT_RUN with reason.
+2. Any unresolved critical checklist item blocks PASS decision.
+3. Remaining gaps must appear in blockers and next-action fields.
+4. If checklist state is ambiguous, stop and open a scoped follow-up issue.
+
 ## Publish Flow
 1. Save completed report as `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002.md`
 2. Open a small docs-only PR with report file
