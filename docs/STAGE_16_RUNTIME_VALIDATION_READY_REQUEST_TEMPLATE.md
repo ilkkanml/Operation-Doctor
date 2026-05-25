@@ -28,6 +28,7 @@ Copy/paste and replace all placeholders:
 ```text
 READY request: all field-fill protocol checks passed.
 
+Request ID: <READY-REQ-YYYYMMDD-XX>
 Run Owner: <name>
 Timestamp: <YYYY-MM-DD HH:MM local>
 
@@ -47,6 +48,11 @@ Evidence links:
 Request:
 Please review and provide READY confirmation if all checks are valid.
 ```
+
+Request ID format note:
+- `READY-REQ-YYYYMMDD-XX`
+- `YYYYMMDD`: local request date
+- `XX`: same-day 2-digit sequence (`01`, `02`, ...)
 
 ## Template B - READY Confirmation (Report Approver)
 Copy/paste and replace all placeholders:
@@ -115,3 +121,4 @@ Complete pending checks and update READY request history row.
 - All placeholders must be replaced before posting.
 - If any placeholder remains, the comment is invalid for gate decision.
 - If decision value is outside the minimum set, the record is invalid and gate must remain BLOCKED.
+- If Request ID format does not match `READY-REQ-YYYYMMDD-XX`, the record is invalid and gate must remain BLOCKED.
