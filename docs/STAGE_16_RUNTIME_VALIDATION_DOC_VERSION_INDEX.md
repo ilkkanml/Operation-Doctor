@@ -84,5 +84,14 @@ Use this path when a critical blocker appears and fast containment is needed:
 4. Update `SESSION_LOG` with blocker note and immediate next action.
 5. Open a scoped fix issue and link it from updated docs.
 
+## Docs-Only WP Definition of Done
+- [ ] Scoped issue exists and clearly limits to docs-only boundary.
+- [ ] Small PR updates only intended document(s) with no runtime/production assets.
+- [ ] Canonical authority (`GATE_STATUS`, `GATE_RECORD_002`) remains consistent.
+- [ ] Request ID trace rules remain valid where applicable.
+- [ ] Placeholder usage is intentional (template/example only) and no accidental unresolved placeholders remain.
+- [ ] `Last Updated` fields are refreshed on edited docs.
+- [ ] Boundary reminder language is preserved.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
