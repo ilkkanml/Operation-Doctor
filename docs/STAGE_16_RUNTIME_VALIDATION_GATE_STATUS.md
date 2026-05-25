@@ -27,9 +27,14 @@ BLOCKED
 ## READY Request History
 Use template source: `docs/STAGE_16_RUNTIME_VALIDATION_READY_REQUEST_TEMPLATE.md`
 
+Request ID format:
+- `READY-REQ-YYYYMMDD-XX`
+- `YYYYMMDD`: local request date
+- `XX`: same-day 2-digit sequence (`01`, `02`, ...)
+
 | Request ID | Timestamp | Run Owner Request Link | Report Approver Confirmation Link | Decision | Notes |
 |---|---|---|---|---|---|
-| READY-REQ-TEMPLATE-001 | TEMPLATE_PENDING | `<issue-or-pr-comment-link>` | `<issue-or-pr-comment-link>` | TEMPLATE_PENDING | Example row only. Replace with real request records. |
+| READY-REQ-YYYYMMDD-XX | TEMPLATE_PENDING | `<issue-or-pr-comment-link>` | `<issue-or-pr-comment-link>` | TEMPLATE_PENDING | Example row only. Replace with real request records. |
 
 Decision column allowed values:
 - `READY_APPROVED`
@@ -40,7 +45,7 @@ If a row uses any other decision value, the record is invalid and gate must rema
 
 ## READY History Row Completeness Checklist
 Each real READY request row must satisfy all items:
-- [ ] Request ID is unique and not template-marked
+- [ ] Request ID is unique and matches `READY-REQ-YYYYMMDD-XX`
 - [ ] Timestamp is filled in local date/time
 - [ ] Run Owner request link points to an actual issue/PR comment
 - [ ] Report Approver confirmation (or rejection) link is present
@@ -49,6 +54,7 @@ Each real READY request row must satisfy all items:
 
 Invalid-record rule:
 - If a row contains unresolved placeholders (`TEMPLATE_`, `<...>`), that row is invalid and gate must remain BLOCKED.
+- If Request ID format does not match `READY-REQ-YYYYMMDD-XX`, that row is invalid and gate must remain BLOCKED.
 
 ## Rule
 Only Run Owner or Report Approver can change state to READY, and both confirmations must be recorded.
