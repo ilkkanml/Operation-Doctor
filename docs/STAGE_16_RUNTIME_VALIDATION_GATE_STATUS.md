@@ -31,6 +31,18 @@ Use template source: `docs/STAGE_16_RUNTIME_VALIDATION_READY_REQUEST_TEMPLATE.md
 |---|---|---|---|---|---|
 | READY-REQ-TEMPLATE-001 | TEMPLATE_PENDING | `<issue-or-pr-comment-link>` | `<issue-or-pr-comment-link>` | TEMPLATE_PENDING | Example row only. Replace with real request records. |
 
+## READY History Row Completeness Checklist
+Each real READY request row must satisfy all items:
+- [ ] Request ID is unique and not template-marked
+- [ ] Timestamp is filled in local date/time
+- [ ] Run Owner request link points to an actual issue/PR comment
+- [ ] Report Approver confirmation (or rejection) link is present
+- [ ] Decision field is non-template and explicit
+- [ ] Notes explain blockers when decision is rejected or pending
+
+Invalid-record rule:
+- If a row contains unresolved placeholders (`TEMPLATE_`, `<...>`), that row is invalid and gate must remain BLOCKED.
+
 ## Rule
 Only Run Owner or Report Approver can change state to READY, and both confirmations must be recorded.
 
