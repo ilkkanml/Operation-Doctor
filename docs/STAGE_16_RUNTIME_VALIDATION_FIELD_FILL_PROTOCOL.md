@@ -24,30 +24,34 @@ If any role is unassigned, state stays BLOCKED.
 
 ## Step-by-Step Fill Order
 
-### Step 1 - Fill Assignment Sheet (Owner First)
+### Step 1 - Fill Assignment Sheet (Request ID + Owner First)
 Document: `docs/STAGE_16_RUNTIME_VALIDATION_ASSIGNMENT_SHEET.md`
 
 Fill in exact order:
-1. Run Owner
-2. Backup Reviewer
-3. Report Approver
-4. Target Run Date
-5. Target Report Publish Date
+1. Request ID (must match `READY-REQ-YYYYMMDD-XX`)
+2. Run Owner
+3. Backup Reviewer
+4. Report Approver
+5. Target Run Date
+6. Target Report Publish Date
 
 Checkpoint:
-- All five fields are non-empty.
+- All six fields are non-empty.
+- Request ID format is valid.
 
 ### Step 2 - Mirror Run Metadata to Run Card
 Document: `docs/STAGE_16_RUNTIME_VALIDATION_RUN_CARD.md`
 
 Fill in exact order:
-1. Run Owner (must match assignment sheet)
-2. Backup Reviewer (must match assignment sheet)
-3. Planned Date (must match target run date/time)
-4. Unity Version
-5. Scene Name
+1. Request ID (must match assignment sheet)
+2. Run Owner (must match assignment sheet)
+3. Backup Reviewer (must match assignment sheet)
+4. Planned Date (must match target run date/time)
+5. Unity Version
+6. Scene Name
 
 Checkpoint:
+- Request ID values are consistent across assignment sheet and run card.
 - Owner/date values are consistent across both docs.
 
 ### Step 3 - Complete Pre-Run Checklist
@@ -59,22 +63,27 @@ Mark complete:
 - Validation packet opened
 - Report 002 draft copied for fill
 - Placeholder scripts present
+- Request ID matches READY request comment and gate history row
 
 Checkpoint:
 - No pre-run item remains unchecked.
 
 ### Step 4 - Record READY Confirmation Inputs
 Record in issue or PR thread:
-1. Run Owner written confirmation with timestamp
-2. Report Approver written confirmation with timestamp
+1. Run Owner READY request comment with Request ID + timestamp
+2. Report Approver confirmation (or rejection) with timestamp
+3. READY history row updated with same Request ID and both comment links
 
 Checkpoint:
 - Both confirmations are present.
+- Gate history row has matching Request ID and links.
 
 ## Final Verification Before READY Request
 All must be true:
-- [ ] Assignment sheet five fields are filled
+- [ ] Assignment sheet six fields are filled
 - [ ] Run card metadata fields are filled
+- [ ] Request ID format is valid (`READY-REQ-YYYYMMDD-XX`)
+- [ ] Request ID is consistent across request comment, assignment sheet, run card, and gate history row
 - [ ] Owner/date consistency is verified
 - [ ] Run card pre-run checklist is fully checked
 - [ ] Run Owner confirmation is recorded
