@@ -179,6 +179,13 @@ Before READY transition:
 3. If gate-history row is moved or regenerated, assignment and gate-history backlinks must be updated in the same cycle.
 4. Missing or one-way linkage keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Response Window Guard
+Before READY transition:
+1. Assignment-related BLOCKED escalations must receive an initial owner or approver response within 24 hours of escalation timestamp.
+2. Response trace must include responder identity, local timestamp, and explicit next action.
+3. If response window is exceeded, assignment remains BLOCKED until exception reason and recovery plan are logged.
+4. Missing or late escalation-response trace keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
