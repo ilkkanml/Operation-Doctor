@@ -77,6 +77,13 @@ For each completed run:
 2. Add PR link in log table.
 3. Record final decision and next action owner.
 
+## Publication Link Integrity Guard
+Before closing a run row:
+1. `Report File` must point to the final report path for that run (not a draft path).
+2. `PR Link` must point to the PR that includes the corresponding report update.
+3. Linked PR must be merged before run row can be treated as complete.
+4. If report/PR linkage is missing or inconsistent, keep status BLOCKED and open a scoped follow-up issue.
+
 ## Boundary Reminder
 Session log examples do not authorize runtime expansion or production rollout.
 Canonical gate authority remains:
