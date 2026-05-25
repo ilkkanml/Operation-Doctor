@@ -130,6 +130,13 @@ Before READY transition:
 3. If change affects confirmations, corresponding confirmation-refresh action must be referenced in the same log entry.
 4. Missing change-log trace keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Run-Date Timezone Label Guard
+Before READY transition:
+1. `Target Run Date` must include explicit local timezone label or offset (for example `America/New_York` or `UTC-04:00`) in addition to date/time.
+2. The same timezone label or offset must be used consistently across assignment sheet, run card, and READY request comment for the same run.
+3. If run-date timezone context changes, linked schedule references and confirmations must be refreshed in the same update cycle.
+4. Missing or inconsistent timezone labeling keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
