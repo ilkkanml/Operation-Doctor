@@ -53,6 +53,13 @@ Before READY transition:
 3. `Target Run Date` must include explicit local time, and `Target Report Publish Date` must use `YYYY-MM-DD` format.
 4. If schedule ordering or format is inconsistent, keep status BLOCKED and open a scoped follow-up issue.
 
+## Request ID Date Alignment Guard
+Before READY transition:
+1. The `YYYYMMDD` segment in `Request ID` must match the date portion of `Target Run Date`.
+2. If `Request ID` date segment and `Target Run Date` differ, regenerate/realign Request ID and update linked docs in the same cycle.
+3. Date alignment updates must also be reflected in READY request comment and gate history row references.
+4. If date alignment remains inconsistent, keep status BLOCKED and open a scoped follow-up issue.
+
 ## Assignment-to-Run Card Sync Guard
 Before READY transition:
 1. `Request ID`, `Run Owner`, `Backup Reviewer`, and `Target Run Date` values must match the run card for the same run.
