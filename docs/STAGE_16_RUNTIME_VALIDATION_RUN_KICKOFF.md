@@ -80,6 +80,13 @@ Immediately before execution starts (after KICKOFF_READY):
 3. If authority state regressed to BLOCKED/unknown, revert kickoff status to KICKOFF_BLOCKED.
 4. Log refresh check outcome in session log or run card notes before proceeding.
 
+## KICKOFF_READY Timestamp-Record Guard
+At final readiness confirmation:
+1. Record readiness-check timestamp in `YYYY-MM-DD HH:MM` format.
+2. Use the same timestamp reference in kickoff notes and session log entry.
+3. If timestamp is missing or ambiguous, keep status as KICKOFF_BLOCKED.
+4. Resolve timestamp gaps before retrying KICKOFF_READY transition.
+
 ## Required Inputs
 - `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_READINESS_SNAPSHOT.md`
