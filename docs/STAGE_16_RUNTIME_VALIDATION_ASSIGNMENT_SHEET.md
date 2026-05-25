@@ -123,6 +123,13 @@ Before READY transition:
 3. If any completion trace element is missing, assignment cannot be marked READY.
 4. Missing/ambiguous completion trace keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Change-Log Guard
+Before READY transition:
+1. Changes to assignment-critical fields (`Request ID`, owners, run/publish dates) must be logged with reason.
+2. Change log must include who changed the field and when (`YYYY-MM-DD HH:MM` local).
+3. If change affects confirmations, corresponding confirmation-refresh action must be referenced in the same log entry.
+4. Missing change-log trace keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
