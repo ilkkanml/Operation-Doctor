@@ -123,3 +123,10 @@ Before publication:
 2. Final value must be one of `PASS`, `PARTIAL`, or `FAIL` only.
 3. Published decision line must not contain separators or multi-value text (`/`, `,`, `or`).
 4. If decision field remains template-like or multi-valued, keep draft pending and block gate progression.
+
+## Decision-Checklist Consistency Guard
+Before publication:
+1. If final `Decision` is `PASS`, no checklist group result may be `FAIL` or `NOT_RUN`.
+2. If any checklist group result is `FAIL`, final `Decision` cannot be `PASS`.
+3. If any checklist group result is `NOT_RUN`, final `Decision` must be `PARTIAL` or `FAIL` and the reason must be recorded in `Blockers` or `Notes`.
+4. If decision and checklist group results conflict, keep draft pending and block gate progression.
