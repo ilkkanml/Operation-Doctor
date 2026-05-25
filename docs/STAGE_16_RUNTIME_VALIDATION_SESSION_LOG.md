@@ -1,5 +1,8 @@
 # Operation: Doctor — Stage 16 Runtime Validation Session Log
 
+## Last Updated
+2026-05-25
+
 ## Purpose
 Track every Unity validation run in a consistent, auditable format.
 
