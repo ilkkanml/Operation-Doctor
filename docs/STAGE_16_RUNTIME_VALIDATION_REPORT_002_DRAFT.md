@@ -109,3 +109,10 @@ Before publication:
 2. Each boundary line must use fixed binary wording: `yes` or `no`.
 3. Ordering of boundary lines must remain: full production start -> scope expansion -> Unity shell boundary break.
 4. If boundary lines are missing, non-binary, or out of order, keep draft pending and block gate progression.
+
+## Status Vocabulary and Rollup Guard
+Before publication:
+1. Allowed checklist status values are only `PASS`, `PARTIAL`, `FAIL`, or `NOT_RUN`.
+2. Group-level result (`A`/`B`/`C`/`D`) must use the same allowed status vocabulary.
+3. If any item in a group is `FAIL`, that group cannot be marked `PASS`.
+4. If status vocabulary or group rollup is inconsistent, keep draft pending and block gate progression.
