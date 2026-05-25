@@ -66,6 +66,13 @@ Before setting KICKOFF_READY, confirm no critical run-window placeholders remain
 3. If any critical field is TBD, keep kickoff status as KICKOFF_BLOCKED.
 4. Resolve missing fields in a scoped docs-only follow-up before retrying readiness.
 
+## KICKOFF_READY Evidence-Link Guard
+Before setting KICKOFF_READY, verify evidence links are reliable:
+1. READY request link is present and points to the intended approval thread.
+2. READY confirmation link is present and points to the corresponding response in the same context.
+3. Gate-status READY history row links match those exact request/confirmation references.
+4. If any link is missing, mismatched, or inaccessible, keep KICKOFF_BLOCKED and open a scoped follow-up issue.
+
 ## Required Inputs
 - `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_READINESS_SNAPSHOT.md`
