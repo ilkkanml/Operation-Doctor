@@ -69,6 +69,20 @@ Reason: Stabilizes sample data shape without runtime implementation.
 Impacted Files: `docs/STAGE_15_WP_15_02_DATA_CONTRACT_DRAFT.md`, `docs/STAGE_14_SAMPLE_DATA_SET.md`.
 Status: Active.
 
+## DEC-009
+Date: 2026-05-25
+Decision: Stage 16 runtime progress starts only with minimal placeholder slices (T1-T4 + smoke), each in small PRs.
+Reason: Reduce risk while moving from docs-only to runtime implementation.
+Impacted Files: `docs/STAGE_16_WP_16_04_RUNTIME_TASK_SPLIT.md`, `docs/STAGE_16_RUNTIME_PROGRESS_LOG.md`, `docs/HANDOFF.md`.
+Status: Active.
+
+## DEC-010
+Date: 2026-05-25
+Decision: Runtime expansion beyond placeholder boundary is blocked until checklist-based validation report is completed.
+Reason: Prevent hidden scope drift and ensure reference integrity before broader implementation.
+Impacted Files: `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md`, `docs/HANDOFF.md`.
+Status: Active.
+
 ## Next Notes
-- New decisions should continue from `DEC-009`.
-- Any post-freeze change that affects scope, boundary, or workflow must be recorded here.
+- New decisions should continue from `DEC-011`.
+- Any change affecting runtime scope boundaries must be recorded here before merge.

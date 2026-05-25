@@ -5,43 +5,42 @@ This file carries project state between chats, agent sessions, and GitHub issue 
 
 ## Current Status (2026-05-25)
 Project: Operation: Doctor
-Stage: Stage 15 — Controlled Codex Handoff
-Status: Stage 14 is frozen. Stage 15 is active with controlled, docs-first tasks only.
+Stage: Stage 16 — Controlled First Runtime Slices
+Status: Stage 16 is active with minimal runtime placeholder implementation under strict boundary control.
 
 ## Repository
 `https://github.com/ilkkanml/Operation-Doctor.git`
 
-## Stage 15 Completed Controlled Items
-- PR #47 merged: controlled handoff checklist + first task scope lock.
-- Issue #48 completed: WP-15-01 Shell Readiness and First Playable Mapping.
-- PR #49 merged: WP-15-01 gate validation report.
-- Issue #50 completed: WP-15-02 First Playable Data Contract Draft.
-- PR #51 merged: WP-15-02 data contract draft (docs-only).
+## Stage 16 Completed Runtime Slices
+- Issue #72 / PR #73: T1 scene placeholder wiring
+- Issue #74 / PR #75: T2 placeholder data loader hook
+- Issue #76 / PR #77: T3 UI boundary panel skeleton
+- Issue #78 / PR #79: T4 flow transition stub
+- Issue #80 / PR #81: placeholder flow smoke driver
+
+## Stage 16 Governance and Validation Docs
+- Issue #82 / PR #83: `docs/STAGE_16_RUNTIME_PROGRESS_LOG.md`
+- Issue #84 / PR #85: `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md`
 
 ## Active Boundaries
-- No full production start.
-- No scope expansion.
-- No implementation outside Unity shell + first playable boundary.
-- No production art/audio/release pipeline work.
-- Use Stage 14 sample data and Stage 15 controlled docs as source of truth.
+- Keep implementation within first playable placeholder boundary.
+- No advanced systems (staff, room, follow-up, economy).
+- No production content expansion or release workflow.
+- Use small PR slices and review-gate checks before merge.
 
 ## Current Source Documents
-1. `docs/MILESTONE_FREEZE.md`
-2. `docs/ENGINE_DECISION.md`
-3. `docs/STAGE_14_IMPLEMENTATION_PLAN.md`
-4. `docs/STAGE_15_CONTROLLED_HANDOFF_CHECKLIST.md`
-5. `docs/STAGE_15_FIRST_TASK_SCOPE.md`
-6. `docs/STAGE_15_WP_15_01_GATE_REPORT.md`
-7. `docs/STAGE_15_WP_15_02_DATA_CONTRACT_DRAFT.md`
+1. `docs/STAGE_16_ENTRY_PLAN.md`
+2. `docs/STAGE_16_WP_16_01_FIRST_SLICE_TASK.md`
+3. `docs/STAGE_16_WP_16_02_RUNTIME_PR_RULESET.md`
+4. `docs/STAGE_16_WP_16_03_RUNTIME_PR_TEMPLATE.md`
+5. `docs/STAGE_16_WP_16_04_RUNTIME_TASK_SPLIT.md`
+6. `docs/STAGE_16_RUNTIME_PROGRESS_LOG.md`
+7. `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md`
 8. `docs/DECISIONS.md`
 
-## Clarification
-- Unity engine decision is approved.
-- Any older notes saying engine is not selected are obsolete.
-
 ## Open Risks
-- Scope creep requests can bypass boundary unless each task is gate-checked.
-- Boundary confusion between docs planning and runtime coding can cause early production drift.
+- Placeholder scaffolding can drift into production logic if PR sizes grow.
+- Inspector reference gaps can break runtime flow despite code-level scope control.
 
 ## Next Controlled Step
-WP-15-03: sync HANDOFF and DECISIONS records, then continue with the next docs-only controlled task.
+Run one checklist-based validation pass using `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md` and record a PASS/FAIL report before broader runtime expansion.
