@@ -93,5 +93,21 @@ Use this path when a critical blocker appears and fast containment is needed:
 - [ ] `Last Updated` fields are refreshed on edited docs.
 - [ ] Boundary reminder language is preserved.
 
+## Controlled Handoff Entry Checklist
+Before starting any Stage 16 runtime-validation task:
+- [ ] Re-read `docs/MILESTONE_FREEZE.md` and confirm active stage is still Stage 15 controlled handoff.
+- [ ] Re-read `docs/ENGINE_DECISION.md` and keep Unity as the selected engine direction.
+- [ ] Re-read `docs/STAGE_11_UNITY_SETUP_PLAN.md` and keep setup/planning-only boundary in scope.
+- [ ] Re-read `docs/REPO_STRUCTURE.md` and stay inside defined shell folder rules.
+- [ ] Re-read `docs/DATA_MODEL_DIRECTION.md` and keep sample/readable JSON direction unchanged.
+- [ ] Re-read `docs/FIRST_PLAYABLE_BOUNDARY.md` and keep first playable scope minimal.
+- [ ] Re-read `README_ShellSetup.md` and keep shell-only setup constraints.
+- [ ] Re-read `docs/STAGE_13_WORK_PACKAGE_BREAKDOWN.md` and keep WP boundaries unchanged.
+- [ ] Re-read `docs/STAGE_13_VALIDATION_BOUNDARY.md` and keep validation-only scope guard.
+- [ ] Re-read `docs/STAGE_14_SAMPLE_DATA_SET.md` and use sample data boundary only.
+- [ ] Re-read `docs/STAGE_14_IMPLEMENTATION_PLAN.md` and keep no-full-production rule.
+- [ ] Confirm first task remains controlled shell / first playable preparation.
+- [ ] Confirm no full production start, no scope expansion, and no Unity shell boundary break.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
