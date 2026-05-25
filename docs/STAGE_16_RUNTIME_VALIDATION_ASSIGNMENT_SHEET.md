@@ -207,6 +207,13 @@ Before READY transition:
 3. Snapshot identifiers must be traceable from gate-history row and READY request comment for the same run.
 4. Missing or stale snapshot references keep status BLOCKED and require a scoped follow-up issue.
 
+## Assignment Publish-Date Freeze Window Guard
+Before READY transition:
+1. After READY preparation starts for a `Request ID`, `Target Report Publish Date` changes must be explicitly justified and approved before transition.
+2. Publish-date change justification must include requester, approver, local timestamp, and updated downstream impact note.
+3. Related schedule traces (assignment sheet, run card, READY request comment) must be synchronized in the same update cycle.
+4. Missing freeze-window approval or unsynced publish-date updates keep status BLOCKED and require a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
