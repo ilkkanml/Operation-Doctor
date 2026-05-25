@@ -12,6 +12,13 @@ Track every Unity validation run in a consistent, auditable format.
 | RUN-002 | READY-REQ-TBD |  |  |  |  |  | `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002.md` |  |  |  |
 | RUN-EXAMPLE-READY-COMM | EXAMPLE_READY-REQ-20260525-01 | NOT_EXECUTED_TEMPLATE | EXAMPLE_RunOwner_Name | EXAMPLE_Reviewer_Name | EXAMPLE_FirstPlayableScene | NOT_EXECUTED_TEMPLATE | N/A | N/A | Example only | Replace with real run data |
 
+## Session Entry Completeness Guard
+Before publishing or updating a real run row:
+1. `Run ID`, `Request ID`, `Date`, `Run Owner`, `Reviewer`, and `Outcome` are non-empty.
+2. `Report File`, `PR Link`, and `Next Action` are filled for executed runs.
+3. Template placeholders (`EXAMPLE_`, `NOT_EXECUTED_TEMPLATE`, blank required cells) are removed from real rows.
+4. If required cells remain incomplete, keep status BLOCKED and open a scoped follow-up issue.
+
 ## READY Communication Example (Not Executed)
 This entry is a format example only and does not represent a completed Unity run.
 
