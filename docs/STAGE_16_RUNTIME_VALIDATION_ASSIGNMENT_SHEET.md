@@ -130,6 +130,13 @@ Before READY transition:
 3. If change affects confirmations, corresponding confirmation-refresh action must be referenced in the same log entry.
 4. Missing change-log trace keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Change-Log Timestamp Order Guard
+Before READY transition:
+1. Assignment change-log timestamps for the same `Request ID` must be non-decreasing in `YYYY-MM-DD HH:MM` local format.
+2. If a new entry timestamp is earlier than a prior entry for the same `Request ID`, the entry is invalid until corrected.
+3. Timestamp-order corrections must reference superseded entries instead of silently overwriting trace history.
+4. Unresolved timestamp-order mismatch keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Run-Date Timezone Label Guard
 Before READY transition:
 1. `Target Run Date` must include explicit local timezone label or offset (for example `America/New_York` or `UTC-04:00`) in addition to date/time.
