@@ -4,16 +4,21 @@
 Coordinate one Unity validation run and produce Report 002 consistently.
 
 ## Session Metadata
+- Request ID:
 - Run Owner:
 - Backup Reviewer:
 - Planned Date:
 - Unity Version:
 - Scene Name:
 
+Request ID format:
+- `READY-REQ-YYYYMMDD-XX`
+
 ## Filled Example Block (Template Only)
 Use this block as format guidance only.
 Replace every `EXAMPLE_` value before run kickoff.
 
+- Request ID: EXAMPLE_READY-REQ-20260525-01
 - Run Owner: EXAMPLE_RunOwner_Name
 - Backup Reviewer: EXAMPLE_BackupReviewer_Name
 - Planned Date: EXAMPLE_2026-05-26 10:30 (local time)
@@ -29,6 +34,7 @@ Validation note:
 - [ ] `docs/STAGE_16_RUNTIME_VALIDATION_PACKET.md` opened
 - [ ] `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002_DRAFT.md` copied for fill-in
 - [ ] Placeholder scripts present in project
+- [ ] Request ID matches READY request comment and gate history row
 
 ## Run Checklist
 - [ ] Scene setup verified (A checks)
