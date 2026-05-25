@@ -130,3 +130,10 @@ Before publication:
 2. If any checklist group result is `FAIL`, final `Decision` cannot be `PASS`.
 3. If any checklist group result is `NOT_RUN`, final `Decision` must be `PARTIAL` or `FAIL` and the reason must be recorded in `Blockers` or `Notes`.
 4. If decision and checklist group results conflict, keep draft pending and block gate progression.
+
+## Cross-Document Trace Guard
+Before publication:
+1. The same `Request ID` must be present in assignment sheet, run card, report draft, and gate status history row.
+2. `Request ID` must map to exactly one run row in session log for this execution cycle.
+3. If any cross-document `Request ID` mismatch exists, keep draft pending and open a scoped follow-up issue.
+4. Publish only after cross-document trace verification is complete and recorded in `Notes`.
