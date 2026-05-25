@@ -15,6 +15,11 @@ Status can change to READY only after all mandatory conditions are met.
 4. Target scene and Unity version set.
 5. Run card pre-run checklist marked complete.
 6. Validation packet and Report 002 draft prepared.
+7. Request ID is present, format-valid (`READY-REQ-YYYYMMDD-XX`), and consistent across:
+   - assignment sheet,
+   - run card,
+   - READY request comment,
+   - READY Request History row in gate status board.
 
 ## Authority to Flip BLOCKED -> READY
 - Primary: Run Owner
@@ -26,6 +31,7 @@ Both must confirm in writing (issue comment or PR note).
 Keep status BLOCKED if:
 - owner/reviewer fields are empty,
 - run date/time is missing,
+- Request ID is missing, invalid, or mismatched across required records,
 - unresolved blocker from previous run exists,
 - boundary-breaking runtime changes are pending.
 
