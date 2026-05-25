@@ -74,3 +74,10 @@ Before closing report:
 2. If decision is PASS, `Next Action` must reference the next scoped runtime task or issue ID.
 3. If decision is PARTIAL/FAIL, `Next Action` must include fix owner, target date (`YYYY-MM-DD`), and follow-up issue ID.
 4. If owner/date/issue trace is incomplete, keep draft pending and block gate progression.
+
+## READY Mapping Consistency Guard
+Before publication:
+1. Apply only this mapping: PASS -> `READY_APPROVED`, PARTIAL -> `READY_PENDING_RECHECK`, FAIL -> `READY_REJECTED`.
+2. The mapped READY decision must appear in gate status history for the same `Request ID`.
+3. Any non-allowed READY value invalidates publication and gate remains BLOCKED.
+4. If mapping update is missing or inconsistent, keep draft pending and open a scoped follow-up issue.
