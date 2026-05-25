@@ -4,10 +4,10 @@
 Track every Unity validation run in a consistent, auditable format.
 
 ## Log Table
-| Run ID | Date | Run Owner | Reviewer | Scene | Outcome (PASS/PARTIAL/FAIL) | Report File | PR Link | Blockers | Next Action |
-|---|---|---|---|---|---|---|---|---|---|
-| RUN-002 |  |  |  |  |  | `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002.md` |  |  |  |
-| RUN-EXAMPLE-READY-COMM | NOT_EXECUTED_TEMPLATE | EXAMPLE_RunOwner_Name | EXAMPLE_Reviewer_Name | EXAMPLE_FirstPlayableScene | NOT_EXECUTED_TEMPLATE | N/A | N/A | Example only | Replace with real run data |
+| Run ID | Request ID | Date | Run Owner | Reviewer | Scene | Outcome (PASS/PARTIAL/FAIL) | Report File | PR Link | Blockers | Next Action |
+|---|---|---|---|---|---|---|---|---|---|---|
+| RUN-002 | READY-REQ-TBD |  |  |  |  |  | `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002.md` |  |  |  |
+| RUN-EXAMPLE-READY-COMM | EXAMPLE_READY-REQ-20260525-01 | NOT_EXECUTED_TEMPLATE | EXAMPLE_RunOwner_Name | EXAMPLE_Reviewer_Name | EXAMPLE_FirstPlayableScene | NOT_EXECUTED_TEMPLATE | N/A | N/A | Example only | Replace with real run data |
 
 ## READY Communication Example (Not Executed)
 This entry is a format example only and does not represent a completed Unity run.
@@ -20,6 +20,7 @@ This entry is a format example only and does not represent a completed Unity run
 ## Per-Run Notes Template
 ```text
 Run ID:
+Request ID:
 Date/Time:
 Unity Version:
 Scene:
