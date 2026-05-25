@@ -67,3 +67,10 @@ Before finalizing decision:
 ## Next Action
 - If PASS: proceed to next small scoped runtime task.
 - If PARTIAL/FAIL: open scoped fix issue and re-run validation.
+
+## Next Action Ownership Guard
+Before closing report:
+1. `Next Action` must be filled for all decision states.
+2. If decision is PASS, `Next Action` must reference the next scoped runtime task or issue ID.
+3. If decision is PARTIAL/FAIL, `Next Action` must include fix owner, target date (`YYYY-MM-DD`), and follow-up issue ID.
+4. If owner/date/issue trace is incomplete, keep draft pending and block gate progression.
