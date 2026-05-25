@@ -193,6 +193,13 @@ Before READY transition:
 3. Conflict resolution updates must be reflected in assignment sheet, run card, and READY request trace in the same cycle.
 4. Unresolved run-slot conflict keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Blocker Aging Guard
+Before READY transition:
+1. Any assignment blocker linked to the same `Request ID` older than 48 hours must include a refreshed status update.
+2. Refreshed update must include blocker owner, local timestamp, and explicit next unblock action.
+3. If there is no progress in the last 48 hours, escalation note must reference responsible owner/approver handoff.
+4. Missing blocker-aging update keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
