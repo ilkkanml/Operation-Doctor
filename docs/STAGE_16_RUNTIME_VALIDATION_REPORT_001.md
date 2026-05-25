@@ -6,6 +6,11 @@
 ## Scope
 Validation status report based on `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md`.
 
+## Request ID Trace Backfill
+- Request ID: BACKFILL_NOT_AVAILABLE
+- Trace Status: This report was created before the Request ID trace standard was introduced.
+- Governance Note: Use Request ID trace standard starting from Report 002 and later records.
+
 ## Environment Note
 This report is generated from repository/runtime-slice traceability review. Unity scene execution was not performed in this run.
 
