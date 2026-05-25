@@ -149,5 +149,12 @@ Prevent duplicate or overlapping docs-only work packages:
 - [ ] If a duplicate issue is opened by mistake, close it and link the canonical issue/PR.
 - [ ] Keep one canonical issue per objective and reference it in the closure summary.
 
+## Controlled Handoff Reference-Integrity Guard
+Before closing a docs-only WP, verify references are valid:
+- [ ] Issue link opens the intended issue and state matches the summary.
+- [ ] PR link opens the intended PR and merge status matches the summary.
+- [ ] Changed-file path references match actual modified docs.
+- [ ] Referenced canonical docs (`GATE_STATUS`, `GATE_RECORD_002`) names/paths are accurate.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
