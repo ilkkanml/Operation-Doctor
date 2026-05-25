@@ -163,5 +163,12 @@ Before closing a docs-only WP, validate date consistency:
 - [ ] If a request ID includes a date segment (`YYYYMMDD`), it matches the documented request date.
 - [ ] Avoid relative date wording (today/yesterday/tomorrow) in closure records.
 
+## Controlled Handoff Boundary-Phrase Lock
+Keep core boundary phrases stable across docs-only updates:
+- [ ] Preserve `no full production start` wording in checklist/summary boundaries.
+- [ ] Preserve `no scope expansion` wording in checklist/summary boundaries.
+- [ ] Preserve `no Unity shell boundary break` wording in checklist/summary boundaries.
+- [ ] If a wording change is needed, stop and open a new scoped issue with explicit rationale.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
