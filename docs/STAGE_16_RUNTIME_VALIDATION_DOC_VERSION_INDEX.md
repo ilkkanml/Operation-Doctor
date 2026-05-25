@@ -51,6 +51,17 @@ If another document conflicts with these, authority documents win.
 5. `RUN_KICKOFF` state update
 6. `SESSION_LOG` and `REPORT_002`
 
+## Issue-to-Doc Routing
+| Issue Pattern | Primary Doc(s) to Update | Secondary Doc(s) |
+|---|---|---|
+| READY request or confirmation added | `GATE_STATUS` | `RUN_KICKOFF`, `SESSION_LOG` |
+| Request ID mismatch or trace inconsistency | `GATE_STATUS`, `FIELD_FILL_PROTOCOL` | `ASSIGNMENT_SHEET`, `RUN_CARD`, `READINESS_SNAPSHOT` |
+| Assignment/schedule change | `ASSIGNMENT_SHEET`, `RUN_CARD` | `READINESS_SNAPSHOT` |
+| Kickoff condition/rule change | `RUN_KICKOFF`, `EXECUTION_GATE` | `GATE_STATUS` |
+| New blocker identified | `READINESS_SNAPSHOT`, `GATE_STATUS` | `SESSION_LOG` |
+| Run outcome/report published | `REPORT_002`, `SESSION_LOG` | `GATE_STATUS` |
+| Checklist criteria/process refinement | `CHECKLIST`, `EXECUTION_GUIDE`, `PACKET` | `FIELD_FILL_PROTOCOL` |
+
 ## Minimal Weekly Maintenance Checklist
 - [ ] Confirm `GATE_STATUS` current state is accurate and `Last Updated` is current.
 - [ ] Verify READY history rows have valid `Request ID` format and no unresolved placeholders.
