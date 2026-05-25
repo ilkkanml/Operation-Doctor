@@ -46,6 +46,13 @@ Before READY transition:
 3. If temporary overlap is unavoidable, document reason and keep status BLOCKED until explicit approval.
 4. Unresolved role overlap requires a scoped follow-up issue before runtime progression.
 
+## Schedule Ordering Guard
+Before READY transition:
+1. `Target Report Publish Date` must be the same day as or later than the date portion of `Target Run Date`.
+2. If `Target Run Date` changes, `Target Report Publish Date` and linked run-card schedule must be updated in the same cycle.
+3. `Target Run Date` must include explicit local time, and `Target Report Publish Date` must use `YYYY-MM-DD` format.
+4. If schedule ordering or format is inconsistent, keep status BLOCKED and open a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
