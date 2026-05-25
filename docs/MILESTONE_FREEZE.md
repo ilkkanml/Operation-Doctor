@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Milestone 6 — Staff Skill, Shift & Rest
+Milestone 7 — Department Capacity
 
-Status: Milestone 5 frozen. Milestone 6 is next active milestone.
+Status: Milestone 6 frozen. Milestone 7 is next active milestone.
 
 ## Freeze Records
 
@@ -81,6 +81,18 @@ Risk: If cost or skill info is unclear, player decisions can feel random. Future
 Next: Milestone 6.
 ```
 
+### Milestone 6 — Staff Skill, Shift & Rest
+```text
+Date: 2026-05-24
+Issue: #15
+Support Issues: #25
+Approvers: Studio Director, QA & Release Director
+Decision: Approved for freeze if skill gain, shift, energy, fatigue, rest area, and training slot rules are readable and no Milestone 7 systems are included.
+Scope: Staff skill gain, shift rule, energy state, fatigue state, rest area rule, training slot rule.
+Risk: If staff state values are unclear, the management layer can feel confusing. Milestone 7 capacity systems must not appear early.
+Next: Milestone 7.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -93,6 +105,6 @@ Next:
 ```
 
 ## Next Notes
-- Do not open Milestone 7 before Milestone 6 is complete.
+- Do not open Milestone 8 before Milestone 7 is complete.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
