@@ -3,11 +3,18 @@
 ## Purpose
 Single packet to execute and document the next Unity validation run.
 
+## Trace Header
+- Request ID:
+- Request ID Format: `READY-REQ-YYYYMMDD-XX`
+- Trace Rule: Request ID must match assignment sheet, run card, READY request comment, and gate history row.
+- Not-Ready Rule: if Request ID is missing, invalid, or mismatched, keep gate/kickoff BLOCKED.
+
 ## Run Order
-1. Open `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md`
-2. Follow `docs/STAGE_16_RUNTIME_VALIDATION_EXECUTION_GUIDE.md`
-3. Capture results into the evidence table below
-4. Publish `REPORT_002` using the template in this packet
+1. Fill Request ID in Trace Header.
+2. Open `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md`
+3. Follow `docs/STAGE_16_RUNTIME_VALIDATION_EXECUTION_GUIDE.md`
+4. Capture results into the evidence table below
+5. Publish `REPORT_002` using the template in this packet
 
 ## Evidence Capture Table
 | Item ID | Check | Result (PASS/FAIL/NOT_RUN) | Evidence | Notes |
@@ -27,6 +34,7 @@ Single packet to execute and document the next Unity validation run.
 ## Report 002 Template
 ```text
 Title: Stage 16 Runtime Validation Report 002
+Request ID:
 Date:
 Validator:
 Scene:
