@@ -116,6 +116,13 @@ Before READY transition:
 3. Refreshed confirmations must reference updated scope and the same `Request ID`.
 4. Unrefreshed confirmations after scope change keep status BLOCKED and require a scoped follow-up issue.
 
+## Assignment Completion Trace Guard
+Before READY transition:
+1. Assignment completion status must reference where confirmations and schedule checks were validated.
+2. Completion trace must include `Request ID`, validator identity, and validation timestamp.
+3. If any completion trace element is missing, assignment cannot be marked READY.
+4. Missing/ambiguous completion trace keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
