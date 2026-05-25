@@ -31,6 +31,14 @@ All must be true before executing the run:
 4. Validation packet is opened and ready.
 5. Report 002 draft is copied for final fill.
 6. No boundary-breaking runtime changes are pending.
+7. READY request and confirmation links are logged in gate status history.
+
+## READY Request Logging Rule
+Before changing status to KICKOFF_READY or executing the run:
+1. Post READY request comment using `docs/STAGE_16_RUNTIME_VALIDATION_READY_REQUEST_TEMPLATE.md`.
+2. Post READY confirmation (or rejection) comment in the same issue/PR thread.
+3. Record both comment links in `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md` under READY Request History.
+4. If logging links are missing, keep kickoff status as KICKOFF_BLOCKED.
 
 ## Required Inputs
 - `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
@@ -38,6 +46,7 @@ All must be true before executing the run:
 - `docs/STAGE_16_RUNTIME_VALIDATION_RUN_CARD.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_PACKET.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002_DRAFT.md`
+- `docs/STAGE_16_RUNTIME_VALIDATION_READY_REQUEST_TEMPLATE.md`
 
 ## Run Window Placeholders
 - Run Owner: TBD
