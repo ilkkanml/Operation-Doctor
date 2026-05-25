@@ -54,6 +54,13 @@ Pending Unity execution run.
 ## Blockers
 - (to be filled)
 
+## Decision Justification Guard
+Before finalizing decision:
+1. Select exactly one decision value: PASS, PARTIAL, or FAIL.
+2. PASS requires evidence section completion and no unresolved critical blockers.
+3. PARTIAL/FAIL requires at least one explicit failed item or blocker entry.
+4. If decision and evidence/blocker state conflict, keep draft pending and open a scoped follow-up issue.
+
 ## Decision
 - PASS / PARTIAL / FAIL
 
