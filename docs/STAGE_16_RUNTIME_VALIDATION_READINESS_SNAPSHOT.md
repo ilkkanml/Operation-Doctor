@@ -21,6 +21,11 @@ Gate state authority is:
 
 If any readiness document conflicts with these two records, gate records win.
 
+## Request ID Trace Status
+- Request ID: TBD
+- Format valid (`READY-REQ-YYYYMMDD-XX`): NO
+- Consistent across required records (assignment, run card, READY request comment, gate history): NO
+
 ## Prepared Assets
 - `docs/STAGE_16_RUNTIME_VALIDATION_CHECKLIST.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_EXECUTION_GUIDE.md`
@@ -34,15 +39,19 @@ If any readiness document conflicts with these two records, gate records win.
 3. Set target run date/time.
 4. Set target scene and Unity version in run card.
 5. Complete run card pre-run checklist.
-6. Record written READY confirmations from Run Owner and Report Approver.
+6. Set Request ID and validate format (`READY-REQ-YYYYMMDD-XX`).
+7. Ensure Request ID is consistent across all required records.
+8. Record written READY confirmations from Run Owner and Report Approver.
 
 ## Blockers (Current)
 - B1: Owner/reviewer/approver fields are still empty.
 - B2: Planned run date/time is missing.
 - B3: Scene target and Unity version are missing.
 - B4: Written confirmations for BLOCKED -> READY are missing.
+- B5: Request ID is missing, invalid, or not yet consistent across required records.
 
 ## Owner Placeholders
+- Request ID: TBD
 - Run Owner: TBD
 - Backup Reviewer: TBD
 - Validation Date: TBD
