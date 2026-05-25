@@ -32,13 +32,15 @@ All must be true before executing the run:
 5. Report 002 draft is copied for final fill.
 6. No boundary-breaking runtime changes are pending.
 7. READY request and confirmation links are logged in gate status history.
+8. Request ID is present, valid, and consistent across request comment and history row.
 
 ## READY Request Logging Rule
 Before changing status to KICKOFF_READY or executing the run:
-1. Post READY request comment using `docs/STAGE_16_RUNTIME_VALIDATION_READY_REQUEST_TEMPLATE.md`.
+1. Post READY request comment using `docs/STAGE_16_RUNTIME_VALIDATION_READY_REQUEST_TEMPLATE.md` and include `Request ID`.
 2. Post READY confirmation (or rejection) comment in the same issue/PR thread.
 3. Record both comment links in `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md` under READY Request History.
-4. If logging links are missing, keep kickoff status as KICKOFF_BLOCKED.
+4. Use the same `Request ID` value in the history row (`READY-REQ-YYYYMMDD-XX`).
+5. If links are missing, Request ID is missing, Request ID format is invalid, or Request ID values do not match, keep kickoff status as KICKOFF_BLOCKED.
 
 ## Required Inputs
 - `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
