@@ -127,5 +127,13 @@ Each docs-only closure summary should include:
 - [ ] Boundary check result (no production start, no scope expansion, no shell break)
 - [ ] Open `WP-16` issue status after merge
 
+## Controlled Handoff Escalation Triggers
+Stop current task and open a new scoped issue if any of these happen:
+- [ ] Required change includes non-doc files (scripts, scenes, prefabs, assets, build config).
+- [ ] Request implies runtime execution or production rollout beyond docs-only boundary.
+- [ ] Proposed change conflicts with canonical authority (`GATE_STATUS`, `GATE_RECORD_002`).
+- [ ] Existing open `WP-16` issue overlaps with the same objective.
+- [ ] First-playable or Unity shell boundary would be expanded by the change.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
