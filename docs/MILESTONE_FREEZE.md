@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Milestone 3 — Manual Department Routing
+Milestone 4 — Test Timer & Equipment Levels
 
-Status: Milestone 2 frozen. Milestone 3 is next active milestone.
+Status: Milestone 3 frozen. Milestone 4 is next active milestone.
 
 ## Freeze Records
 
@@ -45,6 +45,18 @@ Risk: Reward tuning may need later balancing.
 Next: Milestone 3.
 ```
 
+### Milestone 3 — Manual Department Routing
+```text
+Date: 2026-05-24
+Issue: #12
+Support Issues: #21
+Approvers: Studio Director, QA & Release Director
+Decision: Approved for freeze if no blocking UX or flow issue is present.
+Scope: Manual routing flow, service room selection, queue readability, capacity readability, result-ready feedback, Milestone 1-2 regression safety.
+Risk: Queue/capacity UI can confuse players if not readable. Result-ready feedback must be obvious.
+Next: Milestone 4.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -57,6 +69,6 @@ Next:
 ```
 
 ## Next Notes
-- Do not open Milestone 4 before Milestone 3 is complete.
+- Do not open Milestone 5 before Milestone 4 is complete.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
