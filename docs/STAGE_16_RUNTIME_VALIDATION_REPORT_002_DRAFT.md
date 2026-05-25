@@ -137,3 +137,10 @@ Before publication:
 2. `Request ID` must map to exactly one run row in session log for this execution cycle.
 3. If any cross-document `Request ID` mismatch exists, keep draft pending and open a scoped follow-up issue.
 4. Publish only after cross-document trace verification is complete and recorded in `Notes`.
+
+## Draft-to-Final Promotion Guard
+Before publication:
+1. Promote only after draft checks pass; final output file must be `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002.md`.
+2. Final report must preserve the same `Request ID`, `Decision`, and boundary-result lines from the approved draft.
+3. Session log row for the same run must reference the final report path, not the draft path.
+4. If promotion introduces trace mismatch or missing final-path update, keep gate blocked and open a scoped follow-up issue.
