@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Stage 11 — Implementation Planning
+Stage 12 — Unity Shell Preparation
 
-Status: Stage 10 frozen. Stage 11 is next active stage.
+Status: Stage 11 frozen. Stage 12 is next active stage.
 
 ## Freeze Records
 
@@ -141,6 +141,18 @@ Risk: If optional economy effects are unclear, players may lose trust. If effect
 Next: Stage 11.
 ```
 
+### Stage 11 — Unity Setup Planning
+```text
+Date: 2026-05-24
+Issue: #34
+Support Issues: #35, #36, #37, #38, #39
+Approvers: Technical Architect, Studio Director, QA & Release Director
+Decision: Approved for freeze. Unity direction is approved and setup planning is documented.
+Scope: Engine decision, Unity setup plan, repo structure guide, data model direction, first playable boundary, no prototype scope.
+Risk: Unity setup complexity and scope creep must be controlled. No production implementation before next stage.
+Next: Stage 12.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -153,6 +165,7 @@ Next:
 ```
 
 ## Next Notes
-- Stage 11 should focus on implementation planning, not full production.
+- Stage 12 should prepare the Unity shell structure carefully.
+- No full prototype until shell/setup gate is approved.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
