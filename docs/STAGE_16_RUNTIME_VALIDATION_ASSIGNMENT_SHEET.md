@@ -53,6 +53,13 @@ Before READY transition:
 3. `Target Run Date` must include explicit local time, and `Target Report Publish Date` must use `YYYY-MM-DD` format.
 4. If schedule ordering or format is inconsistent, keep status BLOCKED and open a scoped follow-up issue.
 
+## Assignment-to-Run Card Sync Guard
+Before READY transition:
+1. `Request ID`, `Run Owner`, `Backup Reviewer`, and `Target Run Date` values must match the run card for the same run.
+2. If one of these fields changes in assignment sheet, the corresponding run card field must be updated in the same update cycle.
+3. Any documented temporary mismatch must include explicit reason and owner in notes, with gate status remaining BLOCKED.
+4. If cross-document sync is missing or inconsistent, stop transition and open a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
