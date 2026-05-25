@@ -135,5 +135,12 @@ Stop current task and open a new scoped issue if any of these happen:
 - [ ] Existing open `WP-16` issue overlaps with the same objective.
 - [ ] First-playable or Unity shell boundary would be expanded by the change.
 
+## Controlled Handoff Change-Size Guard
+Keep each docs-only work package intentionally small:
+- [ ] Prefer one target document per WP; if more are needed, split into separate WPs.
+- [ ] If edit scope exceeds a focused checklist/section update, stop and re-scope.
+- [ ] If a PR mixes unrelated governance topics, split into separate PRs.
+- [ ] If boundary review becomes ambiguous, open a follow-up scoped issue instead of expanding current WP.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
