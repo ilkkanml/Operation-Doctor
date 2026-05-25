@@ -235,6 +235,13 @@ Before READY transition:
 3. If run date changes materially, pre-run reminder acknowledgments must be refreshed in the same update cycle.
 4. Missing or stale pre-run reminder acknowledgment keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Late-Status Escalation Owner-Ack Guard
+Before READY transition:
+1. If assignment status remains `BLOCKED` within 24 hours of `Target Run Date`, `Run Owner` must post escalation acknowledgment.
+2. Escalation acknowledgment must include `Request ID`, blocker summary, and immediate next action with local timestamp.
+3. If `Run Owner` is unavailable, `Backup Reviewer` must post temporary acknowledgment and notify `Report Approver` in the same cycle.
+4. Missing late-status escalation acknowledgment keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
