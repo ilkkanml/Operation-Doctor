@@ -95,6 +95,13 @@ Before READY transition:
 3. If role confirmation is updated, timestamp must be refreshed in the same update cycle.
 4. Missing or stale confirmation timestamps keep status BLOCKED and require a scoped follow-up issue.
 
+## Confirmation Reference Integrity Guard
+Before READY transition:
+1. Confirmation references must point to accessible issue/PR comments or documented notes in this repository context.
+2. Referenced confirmation text must include the same `Request ID` as assignment fields.
+3. If reference target is edited or deleted, add a fresh confirmation reference in the same update cycle.
+4. Broken/mismatched confirmation references keep status BLOCKED and require a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
