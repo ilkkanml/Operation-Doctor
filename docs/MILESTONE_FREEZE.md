@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Milestone 5 — First Assistant System
+Milestone 6 — Staff Skill, Shift & Rest
 
-Status: Milestone 4 frozen. Milestone 5 is next active milestone.
+Status: Milestone 5 frozen. Milestone 6 is next active milestone.
 
 ## Freeze Records
 
@@ -69,6 +69,18 @@ Risk: Timer or equipment effect may be unclear if UI feedback is weak.
 Next: Milestone 5.
 ```
 
+### Milestone 5 — First Assistant System
+```text
+Date: 2026-05-24
+Issue: #14
+Support Issues: #23, #24
+Approvers: Studio Director, Game & Systems Designer, QA & Release Director
+Decision: Approved for freeze if unlock, selection, cost, skill info, and assignment flow are clear.
+Scope: First hiring unlock, selection flow, salary/cost visibility, readable skill info, one-department assignment rule. Shift/rest is excluded.
+Risk: If cost or skill info is unclear, player decisions can feel random. Future systems must not appear early.
+Next: Milestone 6.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -81,6 +93,6 @@ Next:
 ```
 
 ## Next Notes
-- Do not open Milestone 6 before Milestone 5 is complete.
+- Do not open Milestone 7 before Milestone 6 is complete.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
