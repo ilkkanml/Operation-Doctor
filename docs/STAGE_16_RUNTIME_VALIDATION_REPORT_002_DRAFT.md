@@ -151,3 +151,10 @@ Before publication:
 2. Publication timestamp must be greater than or equal to run execution timestamp for the same `Request ID`.
 3. The same publication date must be reflected in session log and closure summary for this run.
 4. If publication timestamp is missing or inconsistent, keep draft pending and block gate progression.
+
+## Recheck Scheduling Guard
+Before publication for `PARTIAL` or `FAIL` decisions:
+1. `Next Action` must include recheck owner, target recheck date (`YYYY-MM-DD`), and linked follow-up issue ID.
+2. Recheck target date must be later than or equal to publication date and not blank.
+3. Gate history for the same `Request ID` must record the mapped READY state (`READY_PENDING_RECHECK` or `READY_REJECTED`) before recheck planning closes.
+4. If recheck schedule trace is incomplete or inconsistent, keep draft pending and block gate progression.
