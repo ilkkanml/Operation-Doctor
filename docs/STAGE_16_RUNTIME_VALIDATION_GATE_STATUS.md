@@ -31,6 +31,13 @@ Use template source: `docs/STAGE_16_RUNTIME_VALIDATION_READY_REQUEST_TEMPLATE.md
 |---|---|---|---|---|---|
 | READY-REQ-TEMPLATE-001 | TEMPLATE_PENDING | `<issue-or-pr-comment-link>` | `<issue-or-pr-comment-link>` | TEMPLATE_PENDING | Example row only. Replace with real request records. |
 
+Decision column allowed values:
+- `READY_APPROVED`
+- `READY_REJECTED`
+- `READY_PENDING_RECHECK`
+
+If a row uses any other decision value, the record is invalid and gate must remain BLOCKED.
+
 ## READY History Row Completeness Checklist
 Each real READY request row must satisfy all items:
 - [ ] Request ID is unique and not template-marked
