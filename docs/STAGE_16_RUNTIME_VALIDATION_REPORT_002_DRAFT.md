@@ -158,3 +158,10 @@ Before publication for `PARTIAL` or `FAIL` decisions:
 2. Recheck target date must be later than or equal to publication date and not blank.
 3. Gate history for the same `Request ID` must record the mapped READY state (`READY_PENDING_RECHECK` or `READY_REJECTED`) before recheck planning closes.
 4. If recheck schedule trace is incomplete or inconsistent, keep draft pending and block gate progression.
+
+## Follow-Up Issue State Guard
+Before closing PARTIAL/FAIL follow-up loop:
+1. Linked follow-up issue must be in `open` state while fixes are pending.
+2. Follow-up issue may close only after recheck evidence is attached and decision is updated.
+3. Closure summary must reference final follow-up issue state (`open` or `closed`) for the same `Request ID`.
+4. If follow-up issue state trace is missing or inconsistent, keep draft pending and block gate progression.
