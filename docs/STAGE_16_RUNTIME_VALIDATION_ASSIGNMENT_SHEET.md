@@ -109,6 +109,13 @@ Before READY transition:
 3. Fresh confirmations must preserve the same `Request ID` and updated schedule references.
 4. Stale confirmations without refresh keep status BLOCKED and require a scoped follow-up issue.
 
+## Confirmation Scope-Change Guard
+Before READY transition:
+1. If assignment scope changes materially (owner role, run date, or publish date), prior confirmations become stale.
+2. Scope changes require fresh confirmations from affected roles in the same update cycle.
+3. Refreshed confirmations must reference updated scope and the same `Request ID`.
+4. Unrefreshed confirmations after scope change keep status BLOCKED and require a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
