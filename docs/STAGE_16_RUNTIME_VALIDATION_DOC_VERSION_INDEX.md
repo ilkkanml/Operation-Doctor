@@ -51,5 +51,12 @@ If another document conflicts with these, authority documents win.
 5. `RUN_KICKOFF` state update
 6. `SESSION_LOG` and `REPORT_002`
 
+## Minimal Weekly Maintenance Checklist
+- [ ] Confirm `GATE_STATUS` current state is accurate and `Last Updated` is current.
+- [ ] Verify READY history rows have valid `Request ID` format and no unresolved placeholders.
+- [ ] Cross-check `Request ID` consistency across assignment sheet, run card, kickoff, and readiness snapshot.
+- [ ] Ensure `SESSION_LOG` and `REPORT_002` status are synchronized with latest run outcome.
+- [ ] Confirm boundary reminder and no-expansion constraints remain unchanged in core docs.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
