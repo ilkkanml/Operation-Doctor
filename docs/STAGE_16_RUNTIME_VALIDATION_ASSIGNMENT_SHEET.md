@@ -39,6 +39,13 @@ Before READY transition:
 3. No `EXAMPLE_` values remain in active assignment fields.
 4. If any field is incomplete, keep gate/kickoff status BLOCKED and open a scoped follow-up issue.
 
+## Role Separation Guard
+Before READY transition:
+1. `Run Owner` and `Report Approver` must be different people.
+2. `Backup Reviewer` must not duplicate `Run Owner` in normal operation.
+3. If temporary overlap is unavoidable, document reason and keep status BLOCKED until explicit approval.
+4. Unresolved role overlap requires a scoped follow-up issue before runtime progression.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
