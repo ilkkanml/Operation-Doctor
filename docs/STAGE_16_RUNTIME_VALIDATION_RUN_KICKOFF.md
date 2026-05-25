@@ -59,6 +59,13 @@ If readiness regresses after status was marked KICKOFF_READY:
 3. Ensure gate authority docs and READY history reflect the new blocker state.
 4. Open a scoped follow-up issue before retrying kickoff readiness.
 
+## KICKOFF_READY Placeholder-Clearance Guard
+Before setting KICKOFF_READY, confirm no critical run-window placeholders remain:
+1. `Request ID`, `Run Owner`, `Backup Reviewer`, and `Planned Date/Time` are non-TBD.
+2. `Scene Target` and `Unity Version` are non-TBD in kickoff/run-card records.
+3. If any critical field is TBD, keep kickoff status as KICKOFF_BLOCKED.
+4. Resolve missing fields in a scoped docs-only follow-up before retrying readiness.
+
 ## Required Inputs
 - `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_READINESS_SNAPSHOT.md`
