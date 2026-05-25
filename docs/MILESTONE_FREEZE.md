@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Milestone 9 — Patient Rooms & Recovery
+Stage 10 — Advanced Expansion Review
 
-Status: Milestone 8 frozen. Milestone 9 is next active milestone.
+Status: Stage 9 frozen. Stage 10 is next active stage.
 
 ## Freeze Records
 
@@ -117,6 +117,18 @@ Risk: If follow-up and appointment states are not readable, players may miss ret
 Next: Milestone 9.
 ```
 
+### Stage 9 — Room Flow
+```text
+Date: 2026-05-24
+Issue: #28
+Support Issues: #29, #30
+Approvers: Studio Director, Game & Systems Designer, QA & Release Director
+Decision: Approved for freeze if unlock, capacity, occupied/free state, support role assignment, item effect, and reward/flow impact are clear.
+Scope: Room unlock rule, space capacity, occupied/free state, support role assignment, item effect, reward and flow impact, Stage 10 exclusion.
+Risk: If capacity, support role, or item effects are unclear, players may misunderstand the management layer. Stage 10 systems must not appear early.
+Next: Stage 10.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -129,6 +141,6 @@ Next:
 ```
 
 ## Next Notes
-- Do not open Milestone 10 before Milestone 9 is complete.
+- Do not open the next stage before Stage 10 scope is reviewed.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
