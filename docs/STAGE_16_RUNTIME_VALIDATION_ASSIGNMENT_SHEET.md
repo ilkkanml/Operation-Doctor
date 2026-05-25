@@ -228,6 +228,13 @@ Before READY transition:
 3. The same consistency stamp reference must be visible from assignment sheet note, run card note, and READY request comment.
 4. Missing or stale consistency stamp keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Pre-Run Reminder Acknowledgment Guard
+Before READY transition:
+1. Assigned roles (`Run Owner`, `Backup Reviewer`, `Report Approver`) must acknowledge pre-run reminder before `Target Run Date`.
+2. Reminder acknowledgment must include `Request ID`, role name, and local acknowledgment timestamp.
+3. If run date changes materially, pre-run reminder acknowledgments must be refreshed in the same update cycle.
+4. Missing or stale pre-run reminder acknowledgment keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
