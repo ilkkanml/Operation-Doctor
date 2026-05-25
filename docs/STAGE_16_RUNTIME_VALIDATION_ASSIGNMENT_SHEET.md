@@ -102,6 +102,13 @@ Before READY transition:
 3. If reference target is edited or deleted, add a fresh confirmation reference in the same update cycle.
 4. Broken/mismatched confirmation references keep status BLOCKED and require a scoped follow-up issue.
 
+## Confirmation Freshness Window Guard
+Before READY transition:
+1. Role confirmations should be refreshed if they are older than 7 calendar days relative to `Target Run Date`.
+2. If `Target Run Date` shifts by more than 1 day, request fresh confirmations in the same update cycle.
+3. Fresh confirmations must preserve the same `Request ID` and updated schedule references.
+4. Stale confirmations without refresh keep status BLOCKED and require a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
