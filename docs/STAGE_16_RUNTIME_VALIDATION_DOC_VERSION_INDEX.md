@@ -69,5 +69,12 @@ If another document conflicts with these, authority documents win.
 - [ ] Ensure `SESSION_LOG` and `REPORT_002` status are synchronized with latest run outcome.
 - [ ] Confirm boundary reminder and no-expansion constraints remain unchanged in core docs.
 
+## Pre-Merge Doc Sanity Checks
+- [ ] Canonical authority docs (`GATE_STATUS`, `GATE_RECORD_002`) are not contradicted by edited docs.
+- [ ] Request ID fields use `READY-REQ-YYYYMMDD-XX` format where applicable.
+- [ ] No unresolved placeholders remain (`TBD`, `TEMPLATE_`, `<...>`) unless explicitly marked as template/example.
+- [ ] `Last Updated` stamps are refreshed for edited docs.
+- [ ] Boundary language still blocks production expansion.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
