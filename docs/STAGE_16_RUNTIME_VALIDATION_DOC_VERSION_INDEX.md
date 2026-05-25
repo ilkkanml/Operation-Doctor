@@ -109,5 +109,14 @@ Before starting any Stage 16 runtime-validation task:
 - [ ] Confirm first task remains controlled shell / first playable preparation.
 - [ ] Confirm no full production start, no scope expansion, and no Unity shell boundary break.
 
+## Controlled Handoff Exit Checklist
+After completing any Stage 16 docs-only task:
+- [ ] Confirm the task stayed docs-only with no runtime/production file changes.
+- [ ] Confirm no full production start, no scope expansion, and no Unity shell boundary break occurred.
+- [ ] Confirm canonical authority consistency (`GATE_STATUS`, `GATE_RECORD_002`) is preserved.
+- [ ] Confirm issue and PR links are present in the final task summary.
+- [ ] Confirm the PR merged and the linked issue state is `closed`.
+- [ ] Re-check open `WP-16` issues to avoid overlapping parallel scope.
+
 ## Boundary Reminder
 This index is documentation-only and does not authorize runtime expansion or production rollout.
