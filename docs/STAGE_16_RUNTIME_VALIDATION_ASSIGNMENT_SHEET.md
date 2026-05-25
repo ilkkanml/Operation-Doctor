@@ -249,6 +249,13 @@ Before READY transition:
 3. If follow-up deadline passes without update, escalation must be re-acknowledged by owner and re-notified to `Report Approver` in the same cycle.
 4. Missing or expired follow-up deadline trace keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Resolution Verification Guard
+Before READY transition:
+1. When an escalated assignment blocker is marked resolved, `Run Owner` must record explicit resolution verification.
+2. Resolution verification trace must include `Request ID`, resolved blocker reference, evidence link, and local timestamp.
+3. `Backup Reviewer` must confirm resolution validity or reopen escalation in the same cycle if evidence is insufficient.
+4. Missing or unverified escalation resolution trace keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
