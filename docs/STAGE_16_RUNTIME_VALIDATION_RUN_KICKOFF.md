@@ -73,6 +73,13 @@ Before setting KICKOFF_READY, verify evidence links are reliable:
 3. Gate-status READY history row links match those exact request/confirmation references.
 4. If any link is missing, mismatched, or inaccessible, keep KICKOFF_BLOCKED and open a scoped follow-up issue.
 
+## KICKOFF_READY Authority-Refresh Guard
+Immediately before execution starts (after KICKOFF_READY):
+1. Re-open canonical authority docs and confirm current state is still READY.
+2. Re-check latest READY history row still matches active Request ID and evidence links.
+3. If authority state regressed to BLOCKED/unknown, revert kickoff status to KICKOFF_BLOCKED.
+4. Log refresh check outcome in session log or run card notes before proceeding.
+
 ## Required Inputs
 - `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
 - `docs/STAGE_16_RUNTIME_VALIDATION_READINESS_SNAPSHOT.md`
