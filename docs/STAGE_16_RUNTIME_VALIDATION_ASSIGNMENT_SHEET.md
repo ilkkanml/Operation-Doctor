@@ -88,6 +88,13 @@ Before READY transition:
 3. If backup reviewer changes, prior confirmation is invalid and a new confirmation is required in the same cycle.
 4. Missing or stale backup-reviewer confirmation keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Confirmation Timestamp Guard
+Before READY transition:
+1. Role confirmations (`Report Approver`, `Backup Reviewer`) must include timestamp in local `YYYY-MM-DD HH:MM` format.
+2. Confirmation timestamp must be on or before `Target Run Date` and on or after assignment update date.
+3. If role confirmation is updated, timestamp must be refreshed in the same update cycle.
+4. Missing or stale confirmation timestamps keep status BLOCKED and require a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
