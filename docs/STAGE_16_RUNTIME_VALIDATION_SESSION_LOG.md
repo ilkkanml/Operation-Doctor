@@ -7,6 +7,15 @@ Track every Unity validation run in a consistent, auditable format.
 | Run ID | Date | Run Owner | Reviewer | Scene | Outcome (PASS/PARTIAL/FAIL) | Report File | PR Link | Blockers | Next Action |
 |---|---|---|---|---|---|---|---|---|---|
 | RUN-002 |  |  |  |  |  | `docs/STAGE_16_RUNTIME_VALIDATION_REPORT_002.md` |  |  |  |
+| RUN-EXAMPLE-READY-COMM | NOT_EXECUTED_TEMPLATE | EXAMPLE_RunOwner_Name | EXAMPLE_Reviewer_Name | EXAMPLE_FirstPlayableScene | NOT_EXECUTED_TEMPLATE | N/A | N/A | Example only | Replace with real run data |
+
+## READY Communication Example (Not Executed)
+This entry is a format example only and does not represent a completed Unity run.
+
+- READY request comment reference: `<issue-or-pr-comment-link>`
+- READY confirmation comment reference: `<issue-or-pr-comment-link>`
+- Template source: `docs/STAGE_16_RUNTIME_VALIDATION_READY_REQUEST_TEMPLATE.md`
+- Gate decision in this example: BLOCKED (until real mandatory checks are completed)
 
 ## Per-Run Notes Template
 ```text
@@ -40,3 +49,9 @@ For each completed run:
 1. Publish or update corresponding report file.
 2. Add PR link in log table.
 3. Record final decision and next action owner.
+
+## Boundary Reminder
+Session log examples do not authorize runtime expansion or production rollout.
+Canonical gate authority remains:
+- `docs/STAGE_16_RUNTIME_VALIDATION_GATE_STATUS.md`
+- `docs/STAGE_16_RUNTIME_VALIDATION_GATE_RECORD_002.md`
