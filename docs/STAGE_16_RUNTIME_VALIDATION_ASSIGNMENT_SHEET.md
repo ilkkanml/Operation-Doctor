@@ -1,4 +1,4 @@
-# Operation: Doctor — Stage 16 Runtime Validation Assignment Sheet
+# Operation: Doctor - Stage 16 Runtime Validation Assignment Sheet
 
 ## Purpose
 Assign clear ownership for Unity validation execution and Report 002 publication.
@@ -9,6 +9,19 @@ Assign clear ownership for Unity validation execution and Report 002 publication
 - Report Approver:
 - Target Run Date:
 - Target Report Publish Date:
+
+## Filled Example Block (Template Only)
+Use this block as format guidance only.
+Replace every `EXAMPLE_` value before any READY request.
+
+- Run Owner: EXAMPLE_RunOwner_Name
+- Backup Reviewer: EXAMPLE_BackupReviewer_Name
+- Report Approver: EXAMPLE_ReportApprover_Name
+- Target Run Date: EXAMPLE_2026-05-26 10:30 (local time)
+- Target Report Publish Date: EXAMPLE_2026-05-26
+
+Validation note:
+- If any `EXAMPLE_` value remains, gate must stay BLOCKED.
 
 ## Responsibilities
 ### Run Owner
