@@ -4,10 +4,15 @@
 Pending Unity execution run.
 
 ## Metadata
+- Request ID:
 - Date:
 - Validator:
 - Scene:
 - Unity Version:
+
+## Trace Consistency
+- Request ID format: `READY-REQ-YYYYMMDD-XX`
+- Request ID must match assignment sheet, run card, READY request comment, and READY history row in gate status board.
 
 ## Checklist Group Results
 - A. Scene Wiring Checks: NOT_RUN
