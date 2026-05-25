@@ -91,6 +91,13 @@ Before adding or finalizing a real run row:
 3. If a row is corrected, keep the same `Run ID`; do not duplicate with a second row for the same run.
 4. If duplicate `Run ID` is detected, keep status BLOCKED and open a scoped follow-up issue.
 
+## Request ID Uniqueness Guard
+Before adding or finalizing a real run row:
+1. `Request ID` must be unique across all real run rows and follow `READY-REQ-YYYYMMDD-XX` format.
+2. The same `Request ID` must not appear under multiple real `Run ID` values.
+3. If a run row is corrected, update the existing row for that `Request ID` instead of adding a duplicate row.
+4. If duplicate or conflicting `Request ID` usage is detected, keep status BLOCKED and open a scoped follow-up issue.
+
 ## Boundary Reminder
 Session log examples do not authorize runtime expansion or production rollout.
 Canonical gate authority remains:
