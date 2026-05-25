@@ -4,9 +4,9 @@
 A milestone can be frozen only after department review, required support issues, no critical open conflict, and handoff update.
 
 ## Active Milestone
-Milestone 4 — Test Timer & Equipment Levels
+Milestone 5 — First Assistant System
 
-Status: Milestone 3 frozen. Milestone 4 is next active milestone.
+Status: Milestone 4 frozen. Milestone 5 is next active milestone.
 
 ## Freeze Records
 
@@ -57,6 +57,18 @@ Risk: Queue/capacity UI can confuse players if not readable. Result-ready feedba
 Next: Milestone 4.
 ```
 
+### Milestone 4 — Test Timer & Equipment Levels
+```text
+Date: 2026-05-24
+Issue: #13
+Support Issues: #22
+Approvers: Studio Director, QA & Release Director
+Decision: Approved for freeze if timer readability, ready feedback, equipment level clarity, and regression safety are satisfied.
+Scope: Basic test timer, result-ready feedback, equipment level effect clarity, Milestone 1-3 flow compatibility.
+Risk: Timer or equipment effect may be unclear if UI feedback is weak.
+Next: Milestone 5.
+```
+
 ## Freeze Record Format
 ```text
 Milestone:
@@ -69,6 +81,6 @@ Next:
 ```
 
 ## Next Notes
-- Do not open Milestone 5 before Milestone 4 is complete.
+- Do not open Milestone 6 before Milestone 5 is complete.
 - Update handoff after every freeze.
 - Close duplicate issues when found.
