@@ -256,6 +256,13 @@ Before READY transition:
 3. `Backup Reviewer` must confirm resolution validity or reopen escalation in the same cycle if evidence is insufficient.
 4. Missing or unverified escalation resolution trace keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Closure Approval Guard
+Before READY transition:
+1. After escalation resolution is verified, `Report Approver` must record explicit closure approval for the same `Request ID`.
+2. Closure approval trace must include approved resolution reference, approver identity, and local timestamp.
+3. If closure approval is deferred, assignment must remain `BLOCKED` with a documented reason and next approval checkpoint.
+4. Missing or deferred-without-checkpoint closure approval keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
