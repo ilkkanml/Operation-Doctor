@@ -305,6 +305,13 @@ Before READY transition:
 3. Sequence reconciliation must be confirmed by `Run Owner` or `Backup Reviewer` in the same update cycle.
 4. Unresolved escalation-sequence inconsistency keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Multi-Reopen Counter Guard
+Before READY transition:
+1. If the same escalation for a `Request ID` is reopened more than once, trace must include cumulative reopen count (`reopen-1`, `reopen-2`, ...).
+2. Each reopen-count entry must include reopen reason reference, owner identity, and local timestamp.
+3. Any reopen count increment must refresh next-action checkpoint and be acknowledged by `Run Owner` or `Backup Reviewer` in the same cycle.
+4. Missing or inconsistent reopen-count trace keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
