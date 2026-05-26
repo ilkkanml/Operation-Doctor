@@ -298,6 +298,13 @@ Before READY transition:
 3. Final closure after reopen must confirm updated blocker disposition and next monitoring checkpoint.
 4. Missing reopen-closure cycle trace keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Cycle-Sequence Integrity Guard
+Before READY transition:
+1. Escalation lifecycle references for the same `Request ID` must preserve chronological sequence: initiation, acknowledgment, follow-up, resolution/reopen events, and closure approval.
+2. If event ordering is inconsistent, assignment trace must include a reconciliation note with corrected sequence and local timestamps.
+3. Sequence reconciliation must be confirmed by `Run Owner` or `Backup Reviewer` in the same update cycle.
+4. Unresolved escalation-sequence inconsistency keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
