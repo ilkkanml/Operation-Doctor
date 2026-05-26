@@ -277,6 +277,13 @@ Before READY transition:
 3. If a referenced link is moved, edited, or deleted, assignment trace must be updated with replacement link in the same cycle.
 4. Any broken or mismatched escalation trace link keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Trace Edit-Drift Guard
+Before READY transition:
+1. If an escalation-linked comment/note for the same `Request ID` is edited after initial reference, assignment trace must log an edit-drift update with revised reference or timestamp.
+2. Edit-drift update must identify editor, edited artifact reference, and reason for update.
+3. Any edit that changes blocker meaning, status, or action ownership requires same-cycle re-acknowledgment by `Run Owner` or `Backup Reviewer`.
+4. Missing edit-drift reconciliation keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
