@@ -270,6 +270,13 @@ Before READY transition:
 3. If any escalation trace element is missing, assignment must remain `BLOCKED` until the missing reference is added in the same cycle.
 4. Incomplete escalation trace history keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Trace Link-Validity Guard
+Before READY transition:
+1. Each escalation trace reference for the same `Request ID` must point to a reachable repository artifact/comment link and must not be placeholder text.
+2. Linked evidence must contain matching `Request ID` and relevant escalation-phase context.
+3. If a referenced link is moved, edited, or deleted, assignment trace must be updated with replacement link in the same cycle.
+4. Any broken or mismatched escalation trace link keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
