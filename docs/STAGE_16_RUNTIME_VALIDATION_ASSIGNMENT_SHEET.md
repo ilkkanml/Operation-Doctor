@@ -291,6 +291,13 @@ Before READY transition:
 3. Reopened escalation must define updated next-action owner and checkpoint in the same cycle.
 4. Missing reopen-reason trace keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Reopen-Closure Cycle Guard
+Before READY transition:
+1. If a reopened escalation for the same `Request ID` is closed again, trace must reference both reopen event and final closure event as a linked cycle.
+2. Cycle trace must include closing owner, closure rationale, and local closure timestamp.
+3. Final closure after reopen must confirm updated blocker disposition and next monitoring checkpoint.
+4. Missing reopen-closure cycle trace keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
