@@ -312,6 +312,13 @@ Before READY transition:
 3. Any reopen count increment must refresh next-action checkpoint and be acknowledged by `Run Owner` or `Backup Reviewer` in the same cycle.
 4. Missing or inconsistent reopen-count trace keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Reopen-Threshold Response Guard
+Before READY transition:
+1. If cumulative reopen count for the same `Request ID` reaches threshold `3` or higher, trace must include explicit threshold-response note.
+2. Threshold-response note must specify escalation owner decision, mitigation plan, and next review checkpoint with local timestamp.
+3. Threshold-response must be acknowledged by both `Run Owner` and `Report Approver` in the same update cycle.
+4. Missing threshold-response after reopen-count threshold keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
