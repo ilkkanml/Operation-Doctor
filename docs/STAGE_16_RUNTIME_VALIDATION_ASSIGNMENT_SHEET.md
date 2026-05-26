@@ -284,6 +284,13 @@ Before READY transition:
 3. Any edit that changes blocker meaning, status, or action ownership requires same-cycle re-acknowledgment by `Run Owner` or `Backup Reviewer`.
 4. Missing edit-drift reconciliation keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Reopen-Reason Trace Guard
+Before READY transition:
+1. If a previously resolved escalation for the same `Request ID` is reopened, trace must record explicit reopen reason and trigger condition.
+2. Reopen trace must include reopening owner, prior resolution reference, and local timestamp.
+3. Reopened escalation must define updated next-action owner and checkpoint in the same cycle.
+4. Missing reopen-reason trace keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
