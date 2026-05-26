@@ -263,6 +263,13 @@ Before READY transition:
 3. If closure approval is deferred, assignment must remain `BLOCKED` with a documented reason and next approval checkpoint.
 4. Missing or deferred-without-checkpoint closure approval keeps status BLOCKED and requires a scoped follow-up issue.
 
+## Assignment Escalation Trace Completeness Guard
+Before READY transition:
+1. Escalation trace for the same `Request ID` must include initiation, acknowledgment, follow-up, resolution, and closure approval references.
+2. Each trace element must include owner identity and local timestamp in `YYYY-MM-DD HH:MM` format.
+3. If any escalation trace element is missing, assignment must remain `BLOCKED` until the missing reference is added in the same cycle.
+4. Incomplete escalation trace history keeps status BLOCKED and requires a scoped follow-up issue.
+
 ## Responsibilities
 ### Run Owner
 - [ ] Prepare scene and references using run card
